@@ -1,0 +1,3 @@
+Only in ./angular-calendar-gs2/projects/angular-calendar/util: date-adapter-package-date-fns.json
+Only in ./angular-calendar-gs2/projects/angular-calendar/util: date-adapter-package-moment.json
+Only in ./angular-calendar-gs/projects/angular-calendar/util: date-adapter-package.json

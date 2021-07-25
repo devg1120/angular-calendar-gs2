@@ -1,0 +1,1226 @@
+Only in ./angular-calendar-gs/projects/angular-calendar/src: calendar-utils
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/date-adapters/date-adapter.ts ./angular-calendar-gs2/projects/angular-calendar/src/date-adapters/date-adapter.ts
+import { DateAdapter as BaseDateAdapter } from '../calendar-u |	import { DateAdapter as BaseDateAdapter } from 'calendar-util
+  abstract max(dates: Array<Date | number>): Date;	      |	  abstract max(dates: (Date | number)[]): Date;
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/date-adapters/date-fns/index.ts ./angular-calendar-gs2/projects/angular-calendar/src/date-adapters/date-fns/index.ts
+import { adapterFactory as baseAdapterFactory } from '../../c |	import { adapterFactory as baseAdapterFactory } from 'calenda
+  getYear						      |	  getYear,
+    getYear						      |	    getYear,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/date-adapters/moment/index.ts ./angular-calendar-gs2/projects/angular-calendar/src/date-adapters/moment/index.ts
+import { adapterFactory as baseAdapterFactory } from '../../c |	import { adapterFactory as baseAdapterFactory } from 'calenda
+      return moment(date)				      |	      return moment(date).add(amount, 'weeks').toDate();
+        .add(amount, 'weeks')				      <
+        .toDate();					      <
+      return moment(date)				      |	      return moment(date).add(amount, 'months').toDate();
+        .add(amount, 'months')				      <
+        .toDate();					      <
+      return moment(date)				      |	      return moment(date).subtract(amount, 'days').toDate();
+        .subtract(amount, 'days')			      <
+        .toDate();					      <
+      return moment(date)				      |	      return moment(date).subtract(amount, 'weeks').toDate();
+        .subtract(amount, 'weeks')			      <
+        .toDate();					      <
+      return moment(date)				      |	      return moment(date).subtract(amount, 'months').toDate()
+        .subtract(amount, 'months')			      <
+        .toDate();					      <
+      return moment(date)				      |	      return moment(date).date(dayOfMonth).toDate();
+        .date(dayOfMonth)				      <
+        .toDate();					      <
+      return moment(date)				      |	      return moment(date).month(month).toDate();
+        .month(month)					      <
+        .toDate();					      <
+      return moment(date)				      |	      return moment(date).year(year).toDate();
+        .year(year)					      <
+        .toDate();					      <
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/calendar.module.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/calendar.module.ts
+  CalendarA11y						      |	  CalendarA11y,
+    CalendarDayModule					      |	    CalendarDayModule,
+    CalendarDayModule					      |	    CalendarDayModule,
+  ]							      |	  ],
+  ): ModuleWithProviders {				      |	  ): ModuleWithProviders<CalendarModule> {
+        config.a11y || CalendarA11y			      |	        config.a11y || CalendarA11y,
+      ]							      |	      ],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-a11y.interface.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-a11y.interface.ts
+import { MonthViewDay, CalendarEvent, EventAction } from '../ |	import { MonthViewDay, CalendarEvent, EventAction } from 'cal
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-a11y.pipe.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-a11y.pipe.ts
+  name: 'calendarA11y'					      |	  name: 'calendarA11y',
+      ).filter(iMethod => iMethod !== 'constructor');	      |	      ).filter((iMethod) => iMethod !== 'constructor');
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-a11y.provider.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-a11y.provider.ts
+          other: '# events'				      |	          other: '# events',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-angular-date-formatter.provider.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-angular-date-formatter.provider.ts
+  DateFormatterParams					      |	  DateFormatterParams,
+    locale						      |	    locale,
+    daysInWeek						      |	    daysInWeek,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-common.module.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-common.module.ts
+  CalendarTooltipWindowComponent			      |	  CalendarTooltipWindowComponent,
+  ViewPeriod as CalendarViewPeriod			      |	  ViewPeriod as CalendarViewPeriod,
+} from '../../calendar-utils/calendar-utils';		      |	} from 'calendar-utils';
+    KeydownEnterDirective				      |	    KeydownEnterDirective,
+    KeydownEnterDirective				      |	    KeydownEnterDirective,
+  entryComponents: [CalendarTooltipWindowComponent]	      |	  entryComponents: [CalendarTooltipWindowComponent],
+  ): ModuleWithProviders {				      |	  ): ModuleWithProviders<CalendarCommonModule> {
+        config.a11y || CalendarA11y			      |	        config.a11y || CalendarA11y,
+      ]							      |	      ],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-date.pipe.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-date.pipe.ts
+  name: 'calendarDate'					      |	  name: 'calendarDate',
+      ).filter(iMethod => iMethod !== 'constructor');	      |	      ).filter((iMethod) => iMethod !== 'constructor');
+      daysInWeek					      |	      daysInWeek,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-drag-helper.provider.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-drag-helper.provider.ts
+    transform						      |	    transform,
+        bottom: this.startPosition.bottom + transform.y	      |	        bottom: this.startPosition.bottom + transform.y,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-event-actions.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-event-actions.component.ts
+import { CalendarEvent, EventAction } from '../../calendar-ut |	import { CalendarEvent, EventAction } from 'calendar-utils';
+  `							      |	  `,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-event-times-changed-event.interface.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-event-times-changed-event.interface.ts
+import { CalendarEvent } from '../../calendar-utils/calendar- |	import { CalendarEvent } from 'calendar-utils';
+  Resize = 'resize'					      |	  Resize = 'resize',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-event-title-formatter.provider.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-event-title-formatter.provider.ts
+import { CalendarEvent } from '../../calendar-utils/calendar- |	import { CalendarEvent } from 'calendar-utils';
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-event-title.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-event-title.component.ts
+import { CalendarEvent } from '../../calendar-utils/calendar- |	import { CalendarEvent } from 'calendar-utils';
+  `							      |	  `,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-event-title.pipe.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-event-title.pipe.ts
+import { CalendarEvent } from '../../calendar-utils/calendar- |	import { CalendarEvent } from 'calendar-utils';
+  name: 'calendarEventTitle'				      |	  name: 'calendarEventTitle',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-moment-date-formatter.provider.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-moment-date-formatter.provider.ts
+  DateFormatterParams					      |	  DateFormatterParams,
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('dddd');
+      .locale(locale)					      <
+      .format('dddd');					      <
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('D');
+      .locale(locale)					      <
+      .format('D');					      <
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('MMMM YYYY
+      .locale(locale)					      <
+      .format('MMMM YYYY');				      <
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('dddd');
+      .locale(locale)					      <
+      .format('dddd');					      <
+    locale						      |	    locale,
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('MMM D');
+      .locale(locale)					      <
+      .format('MMM D');					      <
+    daysInWeek						      |	    daysInWeek,
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('ha');
+      .locale(locale)					      <
+      .format('ha');					      <
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('ha');
+      .locale(locale)					      <
+      .format('ha');					      <
+    return this.moment(date)				      |	    return this.moment(date).locale(locale).format('dddd, D M
+      .locale(locale)					      <
+      .format('dddd, D MMMM, YYYY');			      <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-native-date-formatter.provider.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-native-date-formatter.provider.ts
+  DateFormatterParams					      |	  DateFormatterParams,
+      month: 'long'					      |	      month: 'long',
+    locale						      |	    locale,
+      month: 'short'					      |	      month: 'short',
+    daysInWeek						      |	    daysInWeek,
+        year: showYear ? 'numeric' : undefined		      |	        year: showYear ? 'numeric' : undefined,
+      weekday: 'long'					      |	      weekday: 'long',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-next-view.directive.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-next-view.directive.ts
+  Output						      |	  Output,
+  selector: '[mwlCalendarNextView]'			      |	  selector: '[mwlCalendarNextView]',
+      month: this.dateAdapter.addMonths			      |	      month: this.dateAdapter.addMonths,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-previous-view.directive.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-previous-view.directive.ts
+  EventEmitter						      |	  EventEmitter,
+  selector: '[mwlCalendarPreviousView]'			      |	  selector: '[mwlCalendarPreviousView]',
+      month: this.dateAdapter.subMonths			      |	      month: this.dateAdapter.subMonths,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-today.directive.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-today.directive.ts
+  EventEmitter						      |	  EventEmitter,
+  selector: '[mwlCalendarToday]'			      |	  selector: '[mwlCalendarToday]',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-tooltip.directive.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-tooltip.directive.ts
+  SimpleChanges						      |	  SimpleChanges,
+import { CalendarEvent } from '../../calendar-utils/calendar- |	import { CalendarEvent } from 'calendar-utils';
+  `							      |	  `,
+  selector: '[mwlCalendarTooltip]'			      |	  selector: '[mwlCalendarTooltip]',
+							      >
+							      >	      if (!this.contents) {
+							      >	        this.hide();
+							      >	      }
+          this.tooltipRef.instance.placement		      |	          this.tooltipRef.instance.placement,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-utils.provider.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-utils.provider.ts
+  getWeekView						      |	  getWeekView,
+} from '../../calendar-utils/calendar-utils';		      |	} from 'calendar-utils';
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/calendar-view.enum.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/calendar-view.enum.ts
+  Day = 'day'						      |	  Day = 'day',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/click.directive.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/click.directive.ts
+  NgZone						      |	  NgZone,
+  selector: '[mwlClick]'				      |	  selector: '[mwlClick]',
+        .subscribe(event => {				      |	        .subscribe((event) => {
+    return new Observable<MouseEvent>(observer => {	      |	    return new Observable<MouseEvent>((observer) => {
+      return this.renderer.listen(this.elm.nativeElement, 'cl |	      return this.renderer.listen(this.elm.nativeElement, 'cl
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/keydown-enter.directive.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/keydown-enter.directive.ts
+import { Directive, Output, EventEmitter, HostListener } from |	import {
+							      >	  Directive,
+							      >	  Output,
+							      >	  EventEmitter,
+							      >	  ElementRef,
+							      >	  NgZone,
+							      >	  Renderer2,
+							      >	  OnInit,
+							      >	  OnDestroy,
+							      >	} from '@angular/core';
+@Directive({						      |	@Directive({ selector: '[mwlKeydownEnter]' })
+  selector: '[mwlKeydownEnter]'				      |	export class KeydownEnterDirective implements OnInit, OnDestr
+})							      |	  @Output('mwlKeydownEnter') keydown = new EventEmitter<any>(
+export class KeydownEnterDirective {			      |
+  @Output('mwlKeydownEnter') keydown = new EventEmitter<Keybo |	  private keydownListener: VoidFunction | null = null;
+							      |
+  @HostListener('keydown', ['$event'])			      |	  constructor(
+  onKeyPress(event: KeyboardEvent) {			      |	    private host: ElementRef<HTMLElement>,
+    if (event.keyCode === 13 || event.which === 13 || event.k |	    private ngZone: NgZone,
+							      >	    private renderer: Renderer2
+							      >	  ) {}
+							      >
+							      >	  ngOnInit(): void {
+							      >	    this.ngZone.runOutsideAngular(() => {
+							      >	      this.keydownListener = this.renderer.listen(
+							      >	        this.host.nativeElement,
+							      >	        'keydown',
+							      >	        (event) => {
+							      >	          if (
+							      >	            event.keyCode === 13 ||
+							      >	            event.which === 13 ||
+							      >	            event.key === 'Enter'
+							      >	          ) {
+							      >
+							      >	            this.ngZone.run(() => {
+							      >	            });
+							      >	          }
+							      >	        }
+							      >	      );
+							      >	    });
+							      >	  }
+							      >
+							      >	  ngOnDestroy(): void {
+							      >	    if (this.keydownListener !== null) {
+							      >	      this.keydownListener();
+							      >	      this.keydownListener = null;
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/common/util.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/common/util.ts
+  WeekViewAllDayEvent					      |	  WeekViewAllDayEvent,
+} from '../../calendar-utils/calendar-utils';		      |	} from 'calendar-utils';
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/day/calendar-day-view.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/day/calendar-day-view.component.ts
+  TemplateRef						      |	  TemplateRef,
+import { CalendarEvent } from '../../calendar-utils/calendar- |	import { CalendarEvent } from 'calendar-utils';
+  `							      |	  `,
+   * The number of segments in an hour. Must be <= 6	      |	   * The number of segments in an hour. Must divide equally i
+							      >	    sourceEvent: MouseEvent | any;
+							      >	    sourceEvent: MouseEvent;
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/day/calendar-day.module.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/day/calendar-day.module.ts
+  CalendarDayViewBeforeRenderEvent			      |	  CalendarDayViewBeforeRenderEvent,
+  exports: [CalendarDayViewComponent]			      |	  exports: [CalendarDayViewComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/month/calendar-month-cell.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/month/calendar-month-cell.component.ts
+  TemplateRef						      |	  TemplateRef,
+import { Injectable } from '@angular/core';		      |	import { MonthViewDay, CalendarEvent } from 'calendar-utils';
+import { MonthViewDay, CalendarEvent, EVENT_TYPE } from '../. <
+import { DateAdapter } from '../../date-adapters/date-adapter <
+import {TaskEvent, WeekTaskEventPos } from './calendar-month- <
+							      <
+/*							      <
+calendar-utils.ts					      <
+							      <
+export enum EVENT_TYPE {                                      <
+   EVENT_TIME= 1,                                             <
+   EVENT_DAY = 2,                                             <
+   EVENT_TASK = 3                                             <
+}                                                             <
+       							      <
+							      <
+export interface CalendarEvent<MetaType = any> {	      <
+  id?: string | number;					      <
+  start: Date;						      <
+  end?: Date;						      <
+  title: string;					      <
+  color?: EventColor;					      <
+  actions?: EventAction[];				      <
+  allDay?: boolean;					      <
+  cssClass?: string;					      <
+  resizable?: {						      <
+    beforeStart?: boolean;				      <
+    afterEnd?: boolean;					      <
+  };							      <
+  draggable?: boolean;					      <
+  meta?: MetaType;					      <
+  }							      <
+*/							      <
+							      <
+@Injectable({						      <
+  providedIn: 'root',					      <
+  })							      <
+							      <
+      let-weekTaskEventPos="weekTaskEventPos"		      <
+ 							      <
+          <span class="cal-day-badge" *ngIf="debug && day.bad |	          <span class="cal-day-badge" *ngIf="day.badgeTotal >
+							      <
+							      <
+<!--							      <
+<div fxLayout="column">					      <
+  <div fxFlexOrder="4">1. One</div>			      <
+  <div fxFlexOrder="2">2. Two</div>			      <
+  <div fxFlexOrder="3">3. Three</div>			      <
+  <div fxFlexOrder="1">4. Four</div>			      <
+</div>							      <
+               fxFlexOrder="{{event.task_pos_index[rowIndex/7 <
+-->							      <
+							      <
+   <div  *ngIf="debug">					      <
+      <div  *ngIf="weekTaskEventPos_array.length">	      <
+          {{weekTaskEventPos_array.length}}		      <
+      </div>						      <
+      <div  *ngFor="let task of this.weekTaskEventPos_array"> <
+              {{ task.event.title}}			      <
+      </div>						      <
+   </div>						      <
+   <div *ngIf="task_view" >				      <
+      <div   *ngFor="let task of this.weekTaskEventPos_array" <
+        <div *ngIf="(this.dateAdapter.isSameDay(task.event.st <
+          ((task.event.start.getTime() <  day.date.getTime()) <
+                    (this.dateAdapter.isSameDay(task.event.en <
+        <ng-template #thenBlock>			      <
+                <div 					      <
+                [ngClass]="{				      <
+                         'cal-event-task-start': this.dateAda <
+                         'cal-event-task-mid'  : (task.event. <
+                                                 (task.event. <
+                         'cal-event-task-end'  : this.dateAda <
+                        }"				      <
+                [ngStyle]="{ backgroundColor: task.event.colo <
+		[ngStyle]="{ order: task.event.task_pos_index <
+                [ngClass]="task.event?.cssClass"	      <
+                (mouseenter)="highlightDay.emit({ event: task <
+                (mouseleave)="unhighlightDay.emit({ event: ta <
+                [mwlCalendarTooltip]="			      <
+                  task.event.title | calendarEventTitle: 'mon <
+                "					      <
+                [tooltipPlacement]="tooltipPlacement"	      <
+                [tooltipEvent]="task.event"		      <
+                [tooltipTemplate]="tooltipTemplate"	      <
+                [tooltipAppendToBody]="tooltipAppendToBody"   <
+                [tooltipDelay]="tooltipDelay"		      <
+                mwlDraggable				      <
+                [class.cal-draggable]="task.event.draggable"  <
+                dragActiveClass="cal-drag-active"	      <
+                [dropData]="{ event: task.event, draggedFrom: <
+                [dragAxis]="{ x: task.event.draggable, y: tas <
+                [validateDrag]="validateDrag"		      <
+                (mwlClick)="eventClicked.emit({ event: task.e <
+                [attr.aria-hidden]="{} | calendarA11y: 'hideM <
+                > 					      <
+	     {{ task.event.task_pos_index[rowIndex/7]}}/{{ ta <
+             {{ this.substr(task.event.title,12,'..') }}      <
+            </div>					      <
+        </ng-template>					      <
+        <ng-template #elseBlock>			      <
+            <div class="cal-event-task-free">FREE</div>	      <
+        </ng-template>					      <
+     </div>						      <
+     </div>						      <
+							      <
+<!--							      |	        <div
+       <div  *ngFor="let event of day.events; trackBy: trackB <
+             [ngSwitch]="event.eventType"		      <
+        >						      <
+							      <
+        <div  *ngSwitchCase="event_type_enum.EVENT_TASK"      <
+                [ngClass]="{				      <
+                         'cal-event-task-start': this.dateAda <
+                         'cal-event-task-mid'  : !this.dateAd <
+                         'cal-event-task-end'  : this.dateAda <
+                        }"				      <
+							      <
+                [ngStyle]="{ backgroundColor: event.color?.pr <
+		[ngStyle]="{ order: event.task_pos_index[rowI <
+                [ngClass]="event?.cssClass"		      <
+                (mouseenter)="highlightDay.emit({ event: even <
+                (mouseleave)="unhighlightDay.emit({ event: ev <
+                [mwlCalendarTooltip]="			      <
+                  event.title | calendarEventTitle: 'monthToo <
+                "					      <
+                [tooltipPlacement]="tooltipPlacement"	      <
+                [tooltipEvent]="event"			      <
+                [tooltipTemplate]="tooltipTemplate"	      <
+                [tooltipAppendToBody]="tooltipAppendToBody"   <
+                [tooltipDelay]="tooltipDelay"		      <
+                mwlDraggable				      <
+                [class.cal-draggable]="event.draggable"	      <
+                dragActiveClass="cal-drag-active"	      <
+                [dropData]="{ event: event, draggedFrom: day  <
+                [dragAxis]="{ x: event.draggable, y: event.dr <
+                [validateDrag]="validateDrag"		      <
+                (mwlClick)="eventClicked.emit({ event: event, <
+                [attr.aria-hidden]="{} | calendarA11y: 'hideM <
+                > 					      <
+	     {{ event.task_pos_index[rowIndex/7]}}/{{ event.t <
+             {{ this.substr(event.title,12,'..') }} 	      <
+            </div>  					      <
+       </div> 						      <
+       -->						      <
+       <div  *ngFor="let event of day.events; trackBy: trackB <
+                    [ngSwitch]="event.eventType"	      <
+		            >				      <
+            <div  *ngSwitchCase="event_type_enum.EVENT_DAY"   <
+                class="cal-event-day"			      <
+                [ngStyle]="{ backgroundColor: event.color?.pr <
+                [ngClass]="event?.cssClass"		      <
+                (mouseenter)="highlightDay.emit({ event: even <
+                (mouseleave)="unhighlightDay.emit({ event: ev <
+                [mwlCalendarTooltip]="			      <
+                  event.title | calendarEventTitle: 'monthToo <
+                "					      <
+                [tooltipPlacement]="tooltipPlacement"	      <
+                [tooltipEvent]="event"			      <
+                [tooltipTemplate]="tooltipTemplate"	      <
+                [tooltipAppendToBody]="tooltipAppendToBody"   <
+                [tooltipDelay]="tooltipDelay"		      <
+                mwlDraggable				      <
+                [class.cal-draggable]="event.draggable"	      <
+                dragActiveClass="cal-drag-active"	      <
+                [dropData]="{ event: event, draggedFrom: day  <
+                [dragAxis]="{ x: event.draggable, y: event.dr <
+                [validateDrag]="validateDrag"		      <
+                (mwlClick)="eventClicked.emit({ event: event, <
+                [attr.aria-hidden]="{} | calendarA11y: 'hideM <
+                > {{ event.title.substr(0,14) }}	      <
+            </div>  					      <
+ 							      <
+	    <!-- <div *ngSwitchDefault -->		      <
+            <div  *ngSwitchCase="event_type_enum.EVENT_TIME"  <
+							      >	          *ngFor="let event of day.events; trackBy: trackByEv
+							      >	          [touchStartLongPress]="{ delay: 300, delta: 30 }"
+                > {{ event.title.substr(0,14) }}	      |	        ></div>
+            </div>					      <
+  							      <
+							      <
+       </div>						      <
+        weekTaskEventPos_array: weekTaskEventPos_array,	      <
+    '[class.cal-event-highlight]': '!!day.backgroundColor'    |	    '[class.cal-event-highlight]': '!!day.backgroundColor',
+  }							      |	  },
+  @Input() debug: boolean;				      <
+							      <
+  @Input() task_view: boolean;				      <
+							      <
+  @Input() rowIndex: number;   //GUSA			      <
+  @Input() weekTaskEventPos_array: WeekTaskEventPos[];   //GU <
+							      <
+  @Output()						      |	  @Output() eventClicked = new EventEmitter<{
+  eventClicked = new EventEmitter<{			      <
+							      <
+  event_type_enum = EVENT_TYPE;				      <
+							      <
+  constructor(						      <
+    protected dateAdapter: DateAdapter			      <
+  ) {							      <
+  }							      <
+							      <
+  ngOnInit() {						      <
+     //console.log("START!!");				      <
+     //console.dir(this.weekTaskEventPos_array);	      <
+     //console.log(this.weekTaskEventPos_array.length);	      <
+  }							      <
+							      <
+  substr(text, len, truncation) {			      <
+    if (truncation === undefined) { truncation = ''; }	      <
+    var text_array = text.split('');			      <
+    var count = 0;					      <
+    var str = '';					      <
+    for (let i = 0; i < text_array.length; i++) {	      <
+         var n = escape(text_array[i]);			      <
+							      <
+         if (n.length < 4) count++;			      <
+         else count += 2;				      <
+							      <
+         if (count > len) {				      <
+           return str + truncation;			      <
+         }						      <
+         str += text.charAt(i);				      <
+    }							      <
+    return text;					      <
+  }							      <
+							      <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/month/calendar-month-view-header.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/month/calendar-month-view-header.component.ts
+  Output						      |	  Output,
+import { WeekDay } from '../../calendar-utils/calendar-utils' |	import { WeekDay } from 'calendar-utils';
+  `							      |	  `,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/month/calendar-month-view.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/month/calendar-month-view.component.ts
+  HostListener,						      <
+  ViewPeriod						      |	  ViewPeriod,
+  } from '../../calendar-utils/calendar-utils';		      |	} from 'calendar-utils';
+  CalendarEventTimesChangedEventType			      |	  CalendarEventTimesChangedEventType,
+							      <
+export type TaskEvent = {				      <
+    event: any;						      <
+    end: boolean;					      <
+    continue: boolean;					      <
+};							      <
+							      <
+export type WeekTaskEventPos = TaskEvent[];		      <
+							      <
+  <div class="cal-month-view" role="grid"		      |	    <div class="cal-month-view" role="grid">
+       (keydown)="handleKeyboardEvent($event)"		      <
+    >							      <
+        (keydown)="this.Keydown($event)"		      <
+							      <
+              [debug]="debug"				      <
+              [task_view]="task_view"			      <
+              [rowIndex]="rowIndex"			      <
+              [weekTaskEventPos_array]="task_view_weekly_post <
+              (keydown)="this.innerCellKeydown($event)"	      <
+  `							      |	  `,
+   * The start number of the week			      |	   * The start number of the week.
+							      >	   * If using the moment date adapter this option won't do an
+							      >	   * ```
+							      >	   * moment.updateLocale('en', {
+							      >	   *   week: {
+							      >	   *     dow: 1, // set start of week to monday instead
+							      >	   *     doy: 0,
+							      >	   *   },
+							      >	   * });
+							      >	   * ```
+  @Output()						      |	  @Output() beforeViewRender = new EventEmitter<
+  beforeViewRender = new EventEmitter<CalendarMonthViewBefore |	    CalendarMonthViewBeforeRenderEvent
+							      >	  >();
+  @Output()						      |	  @Output() dayClicked = new EventEmitter<{
+  dayClicked = new EventEmitter<{			      <
+    sourceEvent: MouseEvent | KeyboardEvent;		      |	    sourceEvent: MouseEvent | any;
+  @Output()						      |	  @Output() eventClicked = new EventEmitter<{
+  eventClicked = new EventEmitter<{			      <
+    sourceEvent: MouseEvent | KeyboardEvent;		      |	    sourceEvent: MouseEvent | any;
+    sourceEvent: MouseEvent | KeyboardEvent;		      |	    sourceEvent: MouseEvent | any;
+  task_view_weekly_postion : WeekTaskEventPos[];	      |	  /**
+							      |	   * @hidden
+  debug : boolean = false;				      |	   */
+  task_view : boolean = true;				      |	  constructor(
+							      >	    protected cdr: ChangeDetectorRef,
+							      >	    protected utils: CalendarUtils,
+							      >	    @Inject(LOCALE_ID) locale: string,
+							      >	    protected dateAdapter: DateAdapter
+							      >	  ) {
+							      >	    this.locale = locale;
+							      >	  }
+      .map(day => day.date.toISOString())		      |	      .map((day) => day.date.toISOString())
+							      <
+  /**							      <
+   * @hidden						      <
+   */							      <
+  constructor(						      <
+    protected cdr: ChangeDetectorRef,			      <
+    protected utils: CalendarUtils,			      <
+    @Inject(LOCALE_ID) locale: string,			      <
+    protected dateAdapter: DateAdapter			      <
+  ) {							      <
+    this.locale = locale;				      <
+	  this.task_view_weekly_postion = [];		      <
+  }							      <
+							      <
+							      <
+    console.log("view.days: ",this.view.days.length);	      <
+	  this.set_task_view_weekly_postion();		      <
+							      <
+	  this.set_task_view_weekly_postion();		      <
+  week_task_stack_trace(week: any)  {			      <
+							      <
+  let task_stack = [];					      <
+  //console.log("week -------------------");		      <
+  /*							      <
+  週間タスクエントリー							      <
+    (1) 継続タスク　　      continue = true; 先週から継続しているタスク　日曜日に判定				      <
+    (2) スタートタスク      今週始まるタスク						      <
+							      <
+  終了フラグ　　end = true;  今週終了するタスク						      <
+							      <
+							      <
+  */							      <
+  // week.forEach(day => {				      <
+   for(let day of week) {				      <
+   //day.events.forEach(event => {			      <
+            for ( let event of day.events) {		      <
+            if (event.eventType == 3) { 		      <
+            if (  this.dateAdapter.isSameDay(day.date , event <
+                //console.log(day.date + " " + event.title +  <
+                  task_stack.push({ event:event, end:false, c <
+                }					      <
+                /*					      <
+                else if (  this.dateAdapter.isSameDay(day.dat <
+                //console.log(day.date + " " + event.title    <
+                   if (day.day == 0  ) {  //sunday mid task   <
+                       task_stack.push({ event:event, end:fal <
+                   }					      <
+                   task_stack.forEach(task => {		      <
+                      if ( task.event == event ) {	      <
+                      //console.log("event match");	      <
+                        task.end = true;		      <
+                      }					      <
+                   });					      <
+                }					      <
+                */					      <
+               else  if (day.day == 0  ) {  //sunday mid task <
+                   console.log(day.date + " " + event.title + <
+                       task_stack.push({ event:event, end:fal <
+               }					      <
+							      <
+              if (  this.dateAdapter.isSameDay(day.date , eve <
+              /*					      <
+                   task_stack.forEach(task => {		      <
+                      if ( task.event == event ) {	      <
+                        task.end = true;		      <
+                        console.log("task.end: ", task.event. <
+                        }				      <
+                    });					      <
+                    */					      <
+                    for ( let i = 0; i < task_stack.length; i <
+                      if ( task_stack[i].event === event ) {  <
+                               task_stack[i].end = true;      <
+                               console.log("task.end: ", task <
+                               console.dir(task_stack[i].even <
+                               console.dir(task_stack[i].end) <
+                               }			      <
+							      <
+                    }					      <
+              }						      <
+             }						      <
+							      <
+             //});					      <
+            //});					      <
+            }						      <
+    }							      <
+							      <
+    /*							      <
+    console.log("task_stack length:",task_stack.length);      <
+     task_stack.forEach(task => {  			      <
+     if (!task.end) {					      <
+         console.log(task.event.title);			      <
+     }							      <
+     });						      <
+     */							      <
+							      <
+      return task_stack;				      <
+  }							      <
+  set_task_view_weekly_postion(): void {		      <
+							      <
+  let day_stack = [];					      <
+  let rowIndex = 0;					      <
+  this.task_view_weekly_postion = [];			      <
+							      <
+  let prev_week_task_stack :WeekTaskEventPos = [];	      <
+							      <
+  //this.view.days.forEach(day => {			      <
+  //for(let day of this.view.days.slice(rowIndex)) {	      <
+   for(let day of this.view.days) {			      <
+       day_stack.push(day);				      <
+							      <
+       if (day.day == 6 ) {				      <
+       let week_task_stack_tmp :WeekTaskEventPos =  this.week <
+       //console.dir(prev_week_task_stack);		      <
+       console.log("week_task_stack_tmp");		      <
+       console.dir(week_task_stack_tmp);		      <
+							      <
+       let week_task_stack :WeekTaskEventPos = [];	      <
+       if (prev_week_task_stack.length == 0) {		      <
+        for (let j = 0; j < week_task_stack_tmp.length; j++)  <
+         if (week_task_stack_tmp[j].continue) {		      <
+              console.log("continue: ",week_task_stack_tmp[j] <
+              week_task_stack.push(week_task_stack_tmp[j]);   <
+         }						      <
+        }						      <
+       } else {						      <
+        for (let j = 0; j < prev_week_task_stack.length; j++) <
+         if (!prev_week_task_stack[j].end) {		      <
+              console.log("pre week no end : ",prev_week_task <
+              //week_task_stack.push(prev_week_task_stack[j]) <
+              let target;				      <
+              for ( let i = 0; i < week_task_stack_tmp.length <
+                       if ( week_task_stack_tmp[i].event ===  <
+                                 target = week_task_stack_tmp <
+                                }			      <
+                                			      <
+                     }  				      <
+              week_task_stack.push(target );		      <
+         }						      <
+        }						      <
+       }						      <
+       for (let j = 0; j < week_task_stack_tmp.length; j++) { <
+         if (!week_task_stack_tmp[j].continue) {	      <
+              week_task_stack.push(week_task_stack_tmp[j]);   <
+           }						      <
+       }						      <
+                    console.log("week_task_stack:",week_task_ <
+	     this.task_view_weekly_postion.push(week_task_sta <
+             prev_week_task_stack = week_task_stack;	      <
+             console.log("prev_week_task_stack");	      <
+             console.dir(prev_week_task_stack);		      <
+	       /*					      <
+	       let week_task_pos_dic = {};		      <
+	       for ( let i = 0; i < week_task_stack.length; i <
+		       week_task_pos_dic[week_task_stack[i].e <
+	       };					      <
+               //console.dir(week_task_pos_dic);	      <
+							      <
+	     this.task_view_weekly_postion.push(week_task_pos <
+		*/					      <
+                //	       console.log(week_task_stack.le <
+	       for ( let i = 0; i < week_task_stack.length; i <
+               //console.log(week_task_stack[i].event.title,  <
+		       //week_task_stack[i].event.task_pos_in <
+		       					      <
+		       if (!week_task_stack[i].event.task_pos <
+			       week_task_stack[i].event.task_ <
+			       week_task_stack[i].event.task_ <
+		       }				      <
+							      <
+		       week_task_stack[i].event.task_pos_inde <
+		       week_task_stack[i].event.task_pos_max[ <
+							      <
+		       //week_task_stack[i].event.task_pos_in <
+	       };					      <
+             day_stack = [];				      <
+	       rowIndex++;				      <
+       }						      <
+							      <
+       // });						      <
+    }							      <
+							      <
+    console.log("task_view_weekly_postion:",this.task_view_we <
+  }							      <
+							      <
+  @HostListener('document:keydown', ['$event'])		      <
+  handleKeyboardEvent(event: KeyboardEvent): void {	      <
+        console.log("view KEY:",(event.keyCode));	      <
+        if (event.keyCode === 16) {			      <
+          if (this.task_view) {				      <
+             this.task_view = false;			      <
+          } else {					      <
+             this.task_view = true;			      <
+          }						      <
+							      <
+        }						      <
+  }							      <
+							      <
+   innerCellKeydown(event) {				      <
+     console.log("cell KEY:",(event.keyCode));		      <
+     /*							      <
+     if (event.keyCode === 13) {			      <
+     }							      <
+     */							      <
+   }							      <
+							      <
+    this.view.days.forEach(day => {			      |	    this.view.days.forEach((day) => {
+        type: CalendarEventTimesChangedEventType.Drop	      |	        type: CalendarEventTimesChangedEventType.Drop,
+      weekendDays: this.weekendDays			      |	      weekendDays: this.weekendDays,
+      weekendDays: this.weekendDays			      |	      weekendDays: this.weekendDays,
+      this.openDay = this.view.days.find(day =>		      |	      this.openDay = this.view.days.find((day) =>
+        period: this.view.period			      |	        period: this.view.period,
+							      <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/month/calendar-month-view.scss ./angular-calendar-gs2/projects/angular-calendar/src/modules/month/calendar-month-view.scss
+    .cal-open-day-panel {				      |	    .cal-open-day-events {
+//      color: map-get($theme, white);			      |	      color: map-get($theme, white);
+//      background-color: map-get($theme, gray);	      |	      background-color: map-get($theme, gray);
+      color: #000000;					      |	      box-shadow: inset 0 0 15px 0 rgba(map-get($theme, black
+      background-color: #FFFFFF;			      <
+//      box-shadow: inset 0 0 15px 0 rgba(map-get($theme, bla <
+//    min-height: 78px;					      |	    min-height: 78px;
+    min-height: 38px;					      |	    flex: 1;
+//GS    flex: 1;					      <
+//    align-items: stretch;				      |	    align-items: stretch;
+							      >
+							      >	    .cal-event {
+							      >	      pointer-events: all !important;
+							      >	    }
+    z-index: 0;						      <
+    //margin-top: 15px;					      |	    margin-top: 15px;
+    //margin-right: 15px;				      |	    margin-right: 15px;
+    //float: right;					      |	    float: right;
+    //margin-bottom: 10px;				      |	    margin-bottom: 10px;
+							      <
+    margin-top: 3px;					      <
+    margin-right: 3px;					      <
+    margin-left: 6px;					      <
+    float: left;					      <
+    margin-bottom: 5px;					      <
+//	  position : absolute;				      |	    flex: 1;
+//    flex: 1;						      |	    align-items: flex-end;
+//GS    align-items: flex-end;				      <
+//    align-items: flex-start; /* GS */			      <
+//    align-content: flex-start; /* GS */		      <
+//    align-content: flex-end; /* GS */			      <
+vertical-align: top;					      <
+//GS    line-height: 10px;				      |	    line-height: 10px;
+    line-height: 16px; /* GS */				      <
+    flex-direction: column; /* GS */			      |	    flex-wrap: wrap;
+    //flex-direction: column-reverse; /* GS */		      <
+    //flex-wrap: wrap;					      <
+    //align-items: flex-start;				      <
+    justify-content: flex-start;			      <
+//GS    width: 10px;					      |	    width: 10px;
+//GS    height: 10px;					      |	    height: 10px;
+//GS    border-radius: 50%;				      |	    border-radius: 50%;
+    border-radius: 3px;   /* GS */			      <
+    display: inline-block;				      <
+    padding-left: 4px;  /* GS */			      <
+    padding-right: 4px; /* GS */			      <
+    margin: 2px;					      <
+//    box-shadow: 2px 2px 4px -2px gray inset;  /* GS */      <
+//    box-shadow: 4px 4px;				      <
+        font-size: 12px;				      <
+            border: 1px solid;				      <
+  }							      <
+							      <
+  .cal-event-day {					      <
+//GS    width: 10px;					      <
+//GS    height: 10px;					      <
+//GS    border-radius: 50%;				      <
+    border-radius: 0px;   /* GS */			      <
+    padding-left: 4px;  /* GS */			      <
+    padding-right: 4px; /* GS */			      <
+//    box-shadow: 2px 2px 4px -2px gray inset;  /* GS */      <
+//    box-shadow: 4px 4px;				      <
+       font-size: 12px;					      <
+           border: 1px solid;				      <
+  }							      <
+/*							      <
+  .cal-event-task-title {				      <
+    //z-index: 2;					      <
+    //white-space: nowrap;				      <
+    font-size: 12px;					      <
+    white-space: pre;					      <
+    //white-space: pre-wrap;				      <
+    //white-space: pre-line;				      <
+    margin : 0 auto;					      <
+    padding : 0;					      <
+  }							      <
+*/							      <
+							      <
+  .cal-event-task {					      <
+//GS    width: 10px;					      <
+//GS    height: 10px;					      <
+//GS    border-radius: 50%;				      <
+//    border-radius: 3px;   /* GS */			      <
+//    display: inline-block;				      <
+    background-color: rgba(255,255,255,0);		      <
+    border-bottom: solid;				      <
+    padding-left: 4px;  /* GS */			      <
+    padding-right: 4px; /* GS */			      <
+//    margin: 2px;					      <
+    margin-top: 2px;					      <
+    margin-bottom: 8px;					      <
+    margin-left: -4px;					      <
+    margin-right: -4px;					      <
+    align-self: stretch;				      <
+    font-size: 12px;					      <
+        border: 1px solid;				      <
+  }     						      <
+							      <
+							      <
+  .cal-event-task-start {				      <
+    position : relative ;				      <
+    display: inline-block;				      <
+    margin-left: 2px;  /* GS */				      <
+    padding-left: 8px;  /* GS */			      <
+    //padding-right: 1px; /* GS */			      <
+    //margin: 2px;					      <
+    width: 100%;					      <
+							      <
+    background: #3399FF;/* ボックスの背景色を指定する */				      <
+    //border-left-radius: 50%;				      <
+    border-top-left-radius: 7em 5em;			      <
+    border-bottom-left-radius: 7em 5em;			      <
+            //border: 1px solid;			      <
+      font-size: 12px;					      <
+      color: #FFFFFF;					      <
+}							      <
+/*							      <
+ .cal-event-task-start:after {				      <
+   position: absolute;   				      <
+   content: "";  					      <
+   top: -4px;  // 矢　縦位置  					      <
+   left: -32px;        // 矢　横位置  				      <
+   border:12px solid;   // 矢　縦幅 				      <
+   border-color:transparent;    // 境界線の色をなしにする 			      <
+   border-right: 20px solid #3399FF;// 矢　横幅 		      <
+							      <
+}							      <
+*/							      <
+  .cal-event-task-mid {					      <
+    position : relative ;				      <
+        display: inline-block;				      <
+    width: 101%;					      <
+    //padding-left: 4px;  /* GS */			      <
+    //padding-right: 4px; /* GS */			      <
+    background: #3399FF;/* ボックスの背景色を指定する */				      <
+    //padding-left: 4px;  /* GS */			      <
+    //padding-right: 4px; /* GS */			      <
+    //margin: 2px;					      <
+    font-size: 12px;					      <
+//       color:  #3399FF;				      <
+							      <
+  .cal-event-task-end {					      <
+    position : relative ;				      <
+       display: inline-block;				      <
+    width: 98%;						      <
+    padding-right: 4px; /* GS */			      <
+    //margin: 2px;					      <
+    background: #3399FF;/* ボックスの背景色を指定する */				      <
+     border-top-right-radius: 7em 5em;			      <
+     border-bottom-right-radius: 7em 5em;		      <
+    font-size: 12px;					      <
+      color: #FFFFFF;					      <
+     //   border: 1px solid;				      <
+}							      <
+/*							      <
+ .cal-event-task-end:after {				      <
+   position: absolute;					      <
+   content: "";						      <
+   top: -4px;	 					      <
+   right: -30px; 					      <
+   border:12px solid;					      <
+   border-color:transparent;				      <
+   border-left: 20px solid #3399FF;			      <
+							      <
+}							      <
+*/							      <
+							      <
+  .cal-event-task-free {				      <
+    position : relative ;				      <
+      display: inline-block;				      <
+ visibility:hidden;					      <
+							      <
+}							      <
+    //font-size: 1.9em;					      |	    font-size: 1.9em;
+    font-size: 1.2em;					      <
+  }							      <
+							      <
+//  .cal-open-day-panel {				      <
+//    display: inline-flex;				      <
+//   }							      <
+							      <
+  .cal-open-day-panel {					      <
+    //display: inline-flex;				      <
+    display: flex;					      <
+    padding: 0px;					      <
+    width: 100%;					      <
+    padding: 0px;					      |	    padding: 15px;
+   // width: 40%;					      <
+    width: 28.5%;					      <
+							      <
+  }							      <
+							      <
+  .cal-open-day-events-list{				      <
+    display: flex;					      <
+							      <
+  }							      <
+							      <
+  .cal-open-day-memo {					      <
+   border: 0;						      <
+    padding: 0px;					      <
+    width: 71.5%;					      <
+//     min-width: 60%;					      <
+//     min-height: 500px;				      <
+     background-color: white;				      <
+      font-size: 0.8em;					      <
+   //    font-weight: bold;				      <
+  }							      <
+							      <
+  .cal-event-title {					      <
+    font-size: 0.8em;					      <
+    width: 100%;					      <
+							      <
+  .cal-open-day-panel .cal-event {			      |	  .cal-open-day-events .cal-event {
+    //position: relative;				      |	    position: relative;
+    top: 0px;						      |	    top: 2px;
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/month/calendar-month.module.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/month/calendar-month.module.ts
+import { FlexLayoutModule } from '@angular/flex-layout';      <
+							      <
+import { HttpClientModule} from '@angular/common/http';	      <
+//import { AngularEditorModule } from '@kolkov/angular-editor <
+import { AngularEditorModule } from '@gs/angular-editor';     <
+//import { TagifyModule } from '@gs/angular-tagify';	      <
+import { AngularSpreadsheetModule } from 'angular-spreadsheet <
+import { AngularJexcelModule } from 'angular-jexcel';	      <
+							      <
+							      <
+import { CalendarOpenDayMemoComponent } from './calendar-open <
+import {FormsModule, ReactiveFormsModule} from '@angular/form <
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';	      <
+							      <
+							      <
+  CalendarMonthViewEventTimesChangedEvent		      |	  CalendarMonthViewEventTimesChangedEvent,
+export { MonthViewDay as CalendarMonthViewDay } from '../../c |	export { MonthViewDay as CalendarMonthViewDay } from 'calenda
+  imports: [CommonModule, DragAndDropModule, CalendarCommonMo |	  imports: [CommonModule, DragAndDropModule, CalendarCommonMo
+	  //FlexLayoutModule, HttpClientModule, AngularEditor <
+              FlexLayoutModule, HttpClientModule, AngularEdit <
+    CalendarOpenDayMemoComponent,			      |	    CalendarMonthViewHeaderComponent,
+	  CalendarMonthViewHeaderComponent		      <
+  providers: [],					      <
+    CalendarOpenDayMemoComponent,			      |	    CalendarMonthViewHeaderComponent,
+    CalendarMonthViewHeaderComponent			      |	  ],
+  ]							      <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/month/calendar-open-day-events.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/month/calendar-open-day-events.component.ts
+  TemplateRef						      |	  TemplateRef,
+  AnimationTriggerMetadata				      |	  AnimationTriggerMetadata,
+import { CalendarEvent } from '../../calendar-utils/calendar- |	import { CalendarEvent } from 'calendar-utils';
+//import { AngularEditorModule } from '@kolkov/angular-editor <
+import { AngularEditorModule } from '@gs/angular-editor';     <
+//import { AngularEditorConfig } from '@kolkov/angular-editor <
+import { AngularEditorConfig } from '@gs/angular-editor';     <
+							      <
+							      <
+      'padding-bottom': 0				      |	      'padding-bottom': 0,
+      'padding-bottom': '*'				      |	      'padding-bottom': '*',
+  transition('void => *', animate('150ms ease-in'))	      |	  transition('void => *', animate('150ms ease-in')),
+        class="cal-open-day-panel"			      |	        class="cal-open-day-events"
+      <div class="cal-open-day-events">			      <
+        <div class="cal-open-day-events-list"		      |	        <div
+							      >	          [touchStartLongPress]="{ delay: 300, delta: 30 }"
+          <mwl-calendar-event-title  class="cal-event-title"  |	          <mwl-calendar-event-title
+	  <!--						      <
+	  -->						      <
+      <!--						      <
+	<textarea class="cal-open-day-memo"></textarea>	      <
+        -->						      <
+	<!--						      <
+	<angular-editor [placeholder]="'Enter text here...'"  <
+	-->						      <
+	<!--						      <
+	<angular-editor formControlName="htmlContent" [config <
+	-->						      <
+							      <
+	<mwl-calendar-open-day-memo class="cal-open-day-memo" <
+							      <
+      </div>						      <
+  animations: [collapseAnimation]			      |	  animations: [collapseAnimation],
+  @Output()						      |	  @Output() eventClicked = new EventEmitter<{
+  eventClicked = new EventEmitter<{			      <
+    sourceEvent: MouseEvent | KeyboardEvent;		      |	    sourceEvent: MouseEvent | any;
+	 						      <
+	htmlContent: "<h1>TEST</h1>";			      <
+							      <
+ editorConfig: AngularEditorConfig = {			      <
+	     editable: true,				      <
+	       spellcheck: false,			      <
+	       height: 'auto',				      <
+	       minHeight: '10',				      <
+	       maxHeight: 'auto',			      <
+	       width: 'auto',				      <
+	       minWidth: '0',				      <
+	       translate: 'yes',			      <
+	       enableToolbar: true,			      <
+	       showToolbar: true,			      <
+	       placeholder: 'Enter text here...',	      <
+	       defaultParagraphSeparator: '',		      <
+	       defaultFontName: '',			      <
+	       defaultFontSize: '',			      <
+	       fonts: [					      <
+		               {class: 'arial', name: 'Arial' <
+		               {class: 'times-new-roman', nam <
+		               {class: 'calibri', name: 'Cali <
+		               {class: 'comic-sans-ms', name: <
+		             ],				      <
+	       customClasses: [				      <
+		             {				      <
+				             name: 'quote',   <
+				             class: 'quote',  <
+				           },		      <
+		             {				      <
+				             name: 'redText', <
+				             class: 'redText' <
+				           },		      <
+		             {				      <
+				             name: 'titleText <
+				             class: 'titleTex <
+				             tag: 'h1',	      <
+				           },		      <
+		           ],				      <
+	     uploadUrl: 'v1/image',			      <
+	     sanitize: true,				      <
+	     toolbarPosition: 'bottom',			      <
+	     toolbarHiddenButtons: [			      <
+		           ['bold', 'italic'],		      <
+		           ['fontSize']			      <
+		         ]				      <
+ };							      <
+	 						      <
+Only in ./angular-calendar-gs/projects/angular-calendar/src/modules/month: calendar-open-day-memo.component.ts
+Only in ./angular-calendar-gs/projects/angular-calendar/src/modules/month: calendar-open-day-memo.component.ts.tagify
+Only in ./angular-calendar-gs/projects/angular-calendar/src/modules: ui
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/week/calendar-week-view-current-time-marker.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/week/calendar-week-view-current-time-marker.component.ts
+							      >	  NgZone,
+  TemplateRef						      |	  TemplateRef,
+import { switchMapTo, startWith, map } from 'rxjs/operators'; |	import { switchMapTo, startWith, map, switchMap } from 'rxjs/
+  `							      |	  `,
+  private columnDate$ = new BehaviorSubject<Date>(this.column |	  columnDate$ = new BehaviorSubject<Date>(this.columnDate);
+  marker$: Observable<{ isVisible: boolean; top: number }> =  |	  marker$: Observable<{
+    60 * 1000						      |	    isVisible: boolean;
+  ).pipe(						      |	    top: number;
+							      >	  }> = this.zone.onStable.pipe(
+							      >	    switchMap(() => interval(60 * 1000)),
+    map(columnDate => {					      |	    map((columnDate) => {
+          hourHeightModifier				      |	          hourHeightModifier,
+  constructor(private dateAdapter: DateAdapter) {}	      |	  constructor(private dateAdapter: DateAdapter, private zone:
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/week/calendar-week-view-event.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/week/calendar-week-view-event.component.ts
+  TemplateRef						      |	  TemplateRef,
+  WeekViewHourColumn					      |	  WeekViewHourColumn,
+  } from '../../calendar-utils/calendar-utils';		      |	} from 'calendar-utils';
+                : weekEvent.event)			      |	                : weekEvent.tempEvent || weekEvent.event)
+        [tooltipEvent]="weekEvent.event"		      |	        [tooltipEvent]="weekEvent.tempEvent || weekEvent.even
+          { event: weekEvent.event, locale: locale }	      |	          { event: weekEvent.tempEvent || weekEvent.event, lo
+          [event]="weekEvent.event"			      |	          [event]="weekEvent.tempEvent || weekEvent.event"
+          [event]="weekEvent.event"			      |	          [event]="weekEvent.tempEvent || weekEvent.event"
+  `							      |	  `,
+    sourceEvent: MouseEvent | KeyboardEvent;		      |	    sourceEvent: MouseEvent | any;
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/week/calendar-week-view-header.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/week/calendar-week-view-header.component.ts
+  TemplateRef						      |	  TemplateRef,
+import { CalendarEvent, WeekDay } from '../../calendar-utils/ |	import { CalendarEvent, WeekDay } from 'calendar-utils';
+  `							      |	  `,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/week/calendar-week-view-hour-segment.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/week/calendar-week-view-hour-segment.component.ts
+import { WeekViewHourSegment } from '../../calendar-utils/cal |	import { WeekViewHourSegment } from 'calendar-utils';
+  `							      |	  `,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/week/calendar-week-view.component.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/week/calendar-week-view.component.ts
+  TemplateRef						      |	  TemplateRef,
+  WeekViewAllDayEventRow				      |	  WeekViewAllDayEventRow,
+  } from '../../calendar-utils/calendar-utils';		      |	} from 'calendar-utils';
+  CalendarEventTimesChangedEventType			      |	  CalendarEventTimesChangedEventType,
+  trackByWeekTimeEvent					      |	  trackByWeekTimeEvent,
+  ValidateDrag						      |	  ValidateDrag,
+							      >	            [touchStartLongPress]="{ delay: 300, delta: 30 }"
+							      >	                [touchStartLongPress]="{ delay: 300, delta: 3
+							      >	                [ghostElementTemplate]="weekEventTemplate"
+							      >	                <ng-template
+							      >	                  [ngTemplateOutlet]="weekEventTemplate"
+							      >	                ></ng-template>
+							      >	                <ng-template #weekEventTemplate>
+							      >	                </ng-template>
+  `							      |	  `,
+							      >	   * If using the moment date adapter this option won't do an
+							      >	   * ```
+							      >	   * moment.updateLocale('en', {
+							      >	   *   week: {
+							      >	   *     dow: 1, // set start of week to monday instead
+							      >	   *     doy: 0,
+							      >	   *   },
+							      >	   * });
+							      >	   * ```
+   * The number of segments in an hour. Must be <= 6	      |	   * The number of segments in an hour. Must divide equally i
+  @Output()						      |	  @Output() dayHeaderClicked = new EventEmitter<{
+  dayHeaderClicked = new EventEmitter<{			      <
+  @Output()						      |	  @Output() eventClicked = new EventEmitter<{
+  eventClicked = new EventEmitter<{			      <
+    sourceEvent: MouseEvent | KeyboardEvent;		      |	    sourceEvent: MouseEvent | any;
+  @Output()						      |	  @Output() eventTimesChanged = new EventEmitter<
+  eventTimesChanged = new EventEmitter<CalendarEventTimesChan |	    CalendarEventTimesChangedEvent
+							      >	  >();
+  @Output()						      |	  @Output() beforeViewRender = new EventEmitter<
+  beforeViewRender = new EventEmitter<CalendarWeekViewBeforeR |	    CalendarWeekViewBeforeRenderEvent
+							      >	  >();
+  @Output()						      |	  @Output() hourSegmentClicked = new EventEmitter<{
+  hourSegmentClicked = new EventEmitter<{		      <
+    time: 0						      |	    time: 0,
+							      >	  lastDraggedEvent: CalendarEvent;
+							      >
+							      >	  /**
+							      >	   * @hidden
+							      >	   */
+  trackByHourColumn = (index: number, column: WeekViewHourCol <
+    column.hours[0] ? column.hours[0].segments[0].date.toISOS <
+							      <
+  /**							      <
+   * @hidden						      <
+   */							      <
+  trackById = (index: number, row: WeekViewAllDayEventRow) => <
+							      <
+  /**							      <
+   * @hidden						      <
+   */							      <
+							      >	  trackByHourColumn = (index: number, column: WeekViewHourCol
+							      >	    column.hours[0] ? column.hours[0].segments[0].date.toISOS
+							      >
+							      >	  /**
+							      >	   * @hidden
+							      >	   */
+							      >	  trackById = (index: number, row: WeekViewAllDayEventRow) =>
+							      >
+							      >	  /**
+							      >	   * @hidden
+							      >	   */
+  protected resizeStarted(eventsContainer: HTMLElement, minWi <
+    this.dayColumnWidth = this.getDayColumnWidth(eventsContai <
+    const resizeHelper: CalendarResizeHelper = new CalendarRe <
+      eventsContainer,					      <
+      minWidth						      <
+    );							      <
+    this.validateResize = ({ rectangle }) =>		      <
+      resizeHelper.validateResize({ rectangle });	      <
+    this.cdr.markForCheck();				      <
+  }							      <
+							      <
+    this.restoreOriginalEvents(tempEvents, adjustedEvents);   |	    this.restoreOriginalEvents(tempEvents, adjustedEvents, tr
+        type: CalendarEventTimesChangedEventType.Resize	      |	        type: CalendarEventTimesChangedEventType.Resize,
+      edge: typeof resizeEvent.edges.left !== 'undefined' ? ' |	      edge: typeof resizeEvent.edges.left !== 'undefined' ? '
+        type: CalendarEventTimesChangedEventType.Resize	      |	        type: CalendarEventTimesChangedEventType.Resize,
+      this.lastDragEnterDate.getTime() === date.getTime()     |	      this.lastDragEnterDate.getTime() === date.getTime() &&
+							      >	      (!this.snapDraggedEvents ||
+							      >	        dropEvent.dropData.event !== this.lastDraggedEvent)
+        allDay						      |	        allDay,
+							      >	    this.lastDraggedEvent = null;
+        transform					      |	        transform,
+							      >	    this.lastDraggedEvent = null;
+      time: 0						      |	      time: 0,
+      this.view.hourColumns.forEach(column => {		      |	      this.view.hourColumns.forEach((column) => {
+          columnEvent =>				      |	          (columnEvent) =>
+    if (this.snapDraggedEvents) {			      <
+      const tempEvents = this.events.map(event => {	      |	    const tempEvents = this.events.map((event) => {
+        new Map([[adjustedEvent, originalEvent]])	      |	      new Map([[adjustedEvent, originalEvent]]),
+							      >	      this.snapDraggedEvents
+    }							      <
+							      >	    this.validateDrag = null;
+      this.eventDragEnterByType[useY ? 'time' : 'allDay'] > 0 |	      (this.snapDraggedEvents ||
+							      >	        this.eventDragEnterByType[useY ? 'time' : 'allDay'] >
+							      >	      this.lastDraggedEvent = weekEvent.event;
+        allDay: !useY					      |	        allDay: !useY,
+      )							      |	      ),
+        ...this.view					      |	        ...this.view,
+        minute: this.dayStartMinute			      |	        minute: this.dayStartMinute,
+        minute: this.dayEndMinute			      |	        minute: this.dayEndMinute,
+      )							      |	      ),
+    adjustedEvents: Map<CalendarEvent, CalendarEvent>	      |	    adjustedEvents: Map<CalendarEvent, CalendarEvent>,
+							      >	    snapDraggedEvents = true
+							      >	    if (snapDraggedEvents) {
+    const adjustedEventsArray = tempEvents.filter(event =>    |	    }
+							      >
+							      >	    const adjustedEventsArray = tempEvents.filter((event) =>
+      adjustedEventsArray.forEach(adjustedEvent => {	      |
+							      >	      adjustedEventsArray.forEach((adjustedEvent) => {
+          columnEvent => columnEvent.event === adjustedEvent  |	          (columnEvent) =>
+							      >	            columnEvent.event ===
+							      >	            (snapDraggedEvents ? adjustedEvent : originalEven
+							      >	          existingColumnEvent['tempEvent'] = adjustedEvent;
+							      >	          if (!snapDraggedEvents) {
+							      >	            existingColumnEvent.height = 0;
+							      >	            existingColumnEvent.width = 0;
+							      >	          }
+          column.events.push({				      |	          const event = {
+            endsAfterDay: false				      |	            endsAfterDay: false,
+          });						      |	            tempEvent: adjustedEvent,
+							      >	          };
+							      >	          column.events.push(event);
+      )							      |	      ),
+      )							      |	      ),
+							      >	  }
+							      >
+							      >	  protected resizeStarted(eventsContainer: HTMLElement, minWi
+							      >	    this.dayColumnWidth = this.getDayColumnWidth(eventsContai
+							      >	    const resizeHelper: CalendarResizeHelper = new CalendarRe
+							      >	      eventsContainer,
+							      >	      minWidth
+							      >	    );
+							      >	    this.validateResize = ({ rectangle }) =>
+							      >	      resizeHelper.validateResize({ rectangle });
+							      >	    this.cdr.markForCheck();
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/src/modules/week/calendar-week.module.ts ./angular-calendar-gs2/projects/angular-calendar/src/modules/week/calendar-week.module.ts
+  CalendarWeekViewBeforeRenderEvent			      |	  CalendarWeekViewBeforeRenderEvent,
+  GetWeekViewArgs as CalendarGetWeekViewArgs		      |	  GetWeekViewArgs as CalendarGetWeekViewArgs,
+  } from '../../calendar-utils/calendar-utils';		      |	} from 'calendar-utils';
+    CalendarCommonModule				      |	    CalendarCommonModule,
+    CalendarWeekViewCurrentTimeMarkerComponent		      |	    CalendarWeekViewCurrentTimeMarkerComponent,
+    CalendarWeekViewCurrentTimeMarkerComponent		      |	    CalendarWeekViewCurrentTimeMarkerComponent,
+  ]							      |	  ],

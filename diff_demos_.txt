@@ -1,0 +1,1762 @@
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-app.component.ts ./angular-calendar-gs2/projects/demos/app/demo-app.component.ts
+      css: 'css'					      |	      css: 'css',
+          )						      |	          ),
+      language: languages[extension]			      |	      language: languages[extension],
+	//  calendarUtils: require('calendar-utils/package.js |	  calendarUtils: require('calendar-utils/package.json').versi
+  fontAwesome: require('font-awesome/package.json').version,  |	  fontAwesome: require('@fortawesome/fontawesome-free/package
+  angularxFlatpickr: require('angularx-flatpickr/package.json |	  angularxFlatpickr: require('angularx-flatpickr/package.json
+  templateUrl: './demo-app.html'			      |	  templateUrl: './demo-app.html',
+    const defaultRoute = this.router.config.find(route => rou |	    const defaultRoute = this.router.config.find(
+							      >	      (route) => route.path === '**'
+							      >	    );
+      .filter(route => route.path !== '**')		      |	      .filter((route) => route.path !== '**')
+      .map(route => ({					      |	      .map((route) => ({
+        tags: route.data.tags || []			      |	        tags: route.data.tags || [],
+      .pipe(filter(event => event instanceof NavigationEnd))  |	      .pipe(filter((event) => event instanceof NavigationEnd)
+      .pipe(filter(event => event instanceof NavigationStart) |	      .pipe(filter((event) => event instanceof NavigationStar
+          demo => `/${demo.path}` === event.url		      |	          (demo) => `/${demo.path}` === event.url
+							      >
+							      >	    const script = document.createElement('script');
+							      >	    script.async = true;
+							      >	    script.setAttribute('data-uid', '7c1627e655');
+							      >	    script.src = 'https://angular-calendar.ck.page/7c1627e655
+							      >	    document.getElementsByTagName('head')[0].appendChild(scri
+      demo =>						      |	      (demo) =>
+        [demo.label.toLowerCase(), ...demo.tags].some(tag =>  |	        [demo.label.toLowerCase(), ...demo.tags].some((tag) =
+<link href="https://unpkg.com/font-awesome@${dependencyVersio |	<link href="https://unpkg.com/@fortawesome/fontawesome-free@$
+`.trim()						      |	`.trim(),
+    demoUtilsSources.forEach(source => {		      |	    demoUtilsSources.forEach((source) => {
+    demo.sources.forEach(source => {			      |	    demo.sources.forEach((source) => {
+          'angularx-flatpickr': dependencyVersions.angularxFl |	          'angularx-flatpickr': dependencyVersions.angularxFl
+        }						      |	          'core-js': '2',
+							      >	        },
+        openFile: 'demo/component.ts'			      |	        openFile: 'demo/component.ts',
+Only in ./angular-calendar-gs/projects/demos/app: demo-app.component.ts.org
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-app.html ./angular-calendar-gs2/projects/demos/app/demo-app.html
+<a							      <
+  href="https://github.com/mattlewis92/angular-calendar"      <
+  class="github-corner d-none d-lg-block"		      <
+  ><svg							      <
+    width="80"						      <
+    height="80"						      <
+    viewBox="0 0 250 250"				      <
+    style="fill:#151513; color:#fff; position: fixed; top: 0; <
+  >							      <
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0  <
+    <path						      <
+      d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122. <
+      fill="currentColor"				      <
+      style="transform-origin: 130px 106px;"		      <
+      class="octo-arm"					      <
+    ></path>						      <
+    <path						      <
+      d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L1 <
+      fill="currentColor"				      <
+      class="octo-body"					      <
+    ></path></svg></a					      <
+><style>						      <
+  .github-corner:hover .octo-arm {			      <
+    animation: octocat-wave 560ms ease-in-out;		      <
+  }							      <
+  @keyframes octocat-wave {				      <
+    0%,							      <
+    100% {						      <
+      transform: rotate(0);				      <
+    }							      <
+    20%,						      <
+    60% {						      <
+      transform: rotate(-25deg);			      <
+    }							      <
+    40%,						      <
+    80% {						      <
+      transform: rotate(10deg);				      <
+    }							      <
+  }							      <
+  @media (max-width: 500px) {				      <
+    .github-corner:hover .octo-arm {			      <
+      animation: none;					      <
+    }							      <
+    .github-corner .octo-arm {				      <
+      animation: octocat-wave 560ms ease-in-out;	      <
+    }							      <
+  }							      <
+</style>						      <
+							      <
+        <a class="nav-link" href="javascript:;"> Demos </a>   |	        <a class="nav-link" href="javascript:;">
+							      >	          <i class="fas fa-laptop"></i> Demos
+							      >	        </a>
+          Getting started				      |	          <i class="fas fa-map-pin"></i> Getting started
+          Documentation					      |	          <i class="fas fa-book"></i> API docs
+          Build tool examples				      |	          <i class="fas fa-tools"></i> Build tool examples
+          class="nav-link text-primary"			      |	          class="nav-link"
+          href="https://twitter.com/mattlewis92_"	      |	          data-formkit-toggle="7c1627e655"
+          target="_blank"				      |	          href="javascript:;"
+							      >	          (click)="isMenuVisible = false"
+          Follow me <i class="fa fa-twitter"></i>	      |	          <i class="fas fa-fw fa-envelope"></i>Subscribe
+          Donate 💵					      |	          <i class="fas fa-dollar-sign"></i> Donate
+							      >	        </a>
+							      >	      </li>
+							      >	    </ul>
+							      >	    <ul class="nav navbar-nav ml-md-auto">
+							      >	      <li class="nav-item">
+							      >	        <a
+							      >	          class="nav-link"
+							      >	          href="https://www.npmjs.com/package/angular-calenda
+							      >	          target="_blank"
+							      >	          [ngbTooltip]="'View on npm'"
+							      >	        >
+							      >	          <i class="fab fa-lg fa-npm"></i>
+							      >	          <span class="d-lg-none">View on npm</span>
+							      >	        </a>
+							      >	      </li>
+							      >	      <li class="nav-item">
+							      >	        <a
+							      >	          class="nav-link"
+							      >	          href="https://github.com/mattlewis92/angular-calend
+							      >	          target="_blank"
+							      >	          [ngbTooltip]="'View on GitHub'"
+							      >	        >
+							      >	          <i class="fab fa-lg fa-github"></i>
+							      >	          <span class="d-lg-none">View on GitHub</span>
+							      >	        </a>
+							      >	      </li>
+							      >	      <li class="nav-item">
+							      >	        <a
+							      >	          class="nav-link text-primary"
+							      >	          href="https://twitter.com/mattlewis92_"
+							      >	          target="_blank"
+							      >	          [ngbTooltip]="'Follow me on Twitter'"
+							      >	        >
+							      >	          <i class="fab fa-lg fa-twitter"></i>
+							      >	          <span class="d-lg-none">Follow me on Twitter</span>
+      <i class="fa fa-spin fa-spinner fa-5x"></i> <br />      |	      <i class="fas fa-spin fa-spinner fa-5x"></i> <br />
+      perfectScrollbar					      <
+                class="btn btn-info pull-right"		      |	                class="btn btn-info float-right"
+                <i class="fa fa-edit"></i> Edit in Stackblitz |	                <i class="fas fa-edit"></i> Edit in Stackblit
+                <i class="fa fa-fw fa-laptop"></i> Live demo  |	                <i class="fas fa-fw fa-laptop"></i> Live demo
+                  <i class="fa fa-fw fa-html5" *ngSwitchCase= |	                  <i class="fab fa-fw fa-html5" *ngSwitchCase
+                  <i class="fa fa-fw fa-css3" *ngSwitchCase=" |	                  <i class="fab fa-fw fa-css3" *ngSwitchCase=
+                  <i class="fa fa-fw fa-code" *ngSwitchDefaul |	                  <i class="fas fa-fw fa-code" *ngSwitchDefau
+    <div						      |	    <div class="col-md-3 col-xl-2 fill-height sidebar-nav scr
+      class="col-md-3 col-xl-2 fill-height sidebar-nav scroll <
+      perfectScrollbar					      <
+    >							      <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-app.module.ts ./angular-calendar-gs2/projects/demos/app/demo-app.module.ts
+  NgbTooltipModule					      |	  NgbTooltipModule,
+import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar <
+      developerMode: !environment.production		      |	      developerMode: !environment.production,
+    PerfectScrollbarModule,				      <
+            label: 'Kitchen sink'			      |	            label: 'Kitchen sink',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Async events'			      |	            label: 'Async events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Optional event end dates'		      |	            label: 'Optional event end dates',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Editable / deletable events'	      |	            label: 'Editable / deletable events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Draggable events'			      |	            label: 'Draggable events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Resizable events'			      |	            label: 'Resizable events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Month view badge total'		      |	            label: 'Month view badge total',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Recurring events'			      |	            label: 'Recurring events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Custom event class'			      |	            label: 'Custom event class',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Clickable events'			      |	            label: 'Clickable events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Clickable times'			      |	            label: 'Clickable times',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Day view start / end time'		      |	            label: 'Day view start / end time',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Day view hour split'		      |	            label: 'Day view hour split',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Navigating between views'		      |	            label: 'Navigating between views',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            tags: ['disable']				      |	            tags: ['disable'],
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Exclude Weekends'			      |	            label: 'Exclude Weekends',
+          }						      |	          },
+            import('./demo-modules/i18n/module').then(m => m. |	            import('./demo-modules/i18n/module').then((m) => 
+            tags: ['translation', 'i18n', 'translate', 'local |	            tags: ['translation', 'i18n', 'translate', 'local
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Draggable external events'		      |	            label: 'Draggable external events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'All day events'			      |	            label: 'All day events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Customise date formats'		      |	            label: 'Customise date formats',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Show dates on title'		      |	            label: 'Show dates on title',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Disable tooltips'			      |	            label: 'Disable tooltips',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Additional event properties'	      |	            label: 'Additional event properties',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Selectable period'			      |	            label: 'Selectable period',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Min max date'			      |	            label: 'Min max date',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Refreshing the view'		      |	            label: 'Refreshing the view',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Custom templates'			      |	            label: 'Custom templates',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Group similar events'		      |	            label: 'Group similar events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            tags: ['right click']			      |	            tags: ['right click'],
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Week view minute precision'		      |	            label: 'Week view minute precision',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Extra month view weeks'		      |	            label: 'Extra month view weeks',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Disable slide animation'		      |	            label: 'Disable slide animation',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'No events label'			      |	            label: 'No events label',
+          }						      |	          },
+            import('./demo-modules/moment/module').then(m =>  |	            import('./demo-modules/moment/module').then((m) =
+            label: 'Use moment'				      |	            label: 'Use moment',
+          }						      |	          },
+							      >	        },
+							      >	        {
+							      >	          path: 'dayjs',
+							      >	          loadChildren: () =>
+							      >	            import('./demo-modules/dayjs/module').then((m) =>
+							      >	          data: {
+							      >	            label: 'Use dayjs',
+							      >	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Day view scheduler'			      |	            label: 'Day view scheduler',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Drag to create events'		      |	            label: 'Drag to create events',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Responsive week view'		      |	            label: 'Responsive week view',
+          }						      |	          },
+            import('./demo-modules/dark-theme/module').then(m |	            import('./demo-modules/dark-theme/module').then(
+							      >	              (m) => m.DemoModule
+							      >	            ),
+            darkTheme: true				      |	            darkTheme: true,
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Week view event margin'		      |	            label: 'Week view event margin',
+          }						      |	          },
+              m => m.DemoModule				      |	              (m) => m.DemoModule
+            label: 'Customise current time marker'	      |	            label: 'Customise current time marker',
+          }						      |	          },
+							      >	        },
+							      >	        {
+							      >	          path: 'public-holidays',
+							      >	          loadChildren: () =>
+							      >	            import('./demo-modules/public-holidays/module').t
+							      >	              (m) => m.DemoModule
+							      >	            ),
+							      >	          data: {
+							      >	            label: 'Public holidays',
+							      >	          },
+							      >	        },
+							      >	        {
+							      >	          path: 'scroll-to-current-time',
+							      >	          loadChildren: () =>
+							      >	            import('./demo-modules/scroll-to-current-time/mod
+							      >	              (m) => m.DemoModule
+							      >	            ),
+							      >	          data: {
+							      >	            label: 'Scroll to current time',
+							      >	          },
+          redirectTo: 'kitchen-sink'			      |	          redirectTo: 'kitchen-sink',
+        }						      |	        },
+        useHash: true					      |	        useHash: true,
+    )							      |	    ),
+  bootstrap: [DemoAppComponent]				      |	  bootstrap: [DemoAppComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/additional-event-properties/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/additional-event-properties/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+  events: Array<CalendarEvent<{ id: number }>> = [	      |	  events: CalendarEvent<{ id: number }>[] = [
+        id: 1						      |	        id: 1,
+      }							      |	      },
+        id: 2						      |	        id: 2,
+      }							      |	      },
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/additional-event-properties/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/additional-event-properties/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/additional-event-properties/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/additional-event-properties/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/all-day-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/all-day-events/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      allDay: true					      |	      allDay: true,
+      start: new Date()					      |	      start: new Date(),
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/all-day-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/all-day-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/all-day-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/all-day-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/async-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/async-events/component.ts
+  format						      |	  format,
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+  events$: Observable<Array<CalendarEvent<{ film: Film }>>>;  |	  events$: Observable<CalendarEvent<{ film: Film }>[]>;
+      day: startOfDay					      |	      day: startOfDay,
+      day: endOfDay					      |	      day: endOfDay,
+                film					      |	                film,
+              }						      |	              },
+    events						      |	    events,
+    events: Array<CalendarEvent<{ film: Film }>>;	      |	    events: CalendarEvent<{ film: Film }>[];
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/async-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/async-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/async-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/async-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/async-events/template.html ./angular-calendar-gs2/projects/demos/app/demo-modules/async-events/template.html
+    <i class="fa fa-spin fa-spinner fa-5x"></i> <br />	      |	    <i class="fas fa-spin fa-spinner fa-5x"></i> <br />
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/before-view-render/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/before-view-render/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+  CalendarView						      |	  CalendarView,
+      .bg-pink {					      |	      .cal-month-view .bg-pink,
+							      >	      .cal-week-view .cal-day-columns .bg-pink,
+							      >	      .cal-day-view .bg-pink {
+    `							      |	    `,
+  ]							      |	  ],
+    renderEvent.body.forEach(day => {			      |	    renderEvent.body.forEach((day) => {
+    renderEvent.hourColumns.forEach(hourColumn => {	      |	    renderEvent.hourColumns.forEach((hourColumn) => {
+      hourColumn.hours.forEach(hour => {		      |	      hourColumn.hours.forEach((hour) => {
+        hour.segments.forEach(segment => {		      |	        hour.segments.forEach((segment) => {
+    renderEvent.hourColumns.forEach(hourColumn => {	      |	    renderEvent.hourColumns.forEach((hourColumn) => {
+      hourColumn.hours.forEach(hour => {		      |	      hourColumn.hours.forEach((hour) => {
+        hour.segments.forEach(segment => {		      |	        hour.segments.forEach((segment) => {
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/before-view-render/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/before-view-render/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/before-view-render/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/before-view-render/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/clickable-days/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/clickable-days/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/clickable-days/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/clickable-days/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/clickable-days/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/clickable-days/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/clickable-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/clickable-events/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      start: new Date()					      |	      start: new Date(),
+      start: new Date()					      |	      start: new Date(),
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/clickable-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/clickable-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/clickable-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/clickable-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/context-menu/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/context-menu/component.ts
+    `							      |	    `,
+  ]							      |	  ],
+      color: colors.red					      |	      color: colors.red,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/context-menu/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/context-menu/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+      useBootstrap4: true				      |	      useBootstrap4: true,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/context-menu/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/context-menu/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/custom-event-class/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/custom-event-class/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+    `							      |	    `,
+  ]							      |	  ],
+      cssClass: 'my-custom-class'			      |	      cssClass: 'my-custom-class',
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/custom-event-class/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/custom-event-class/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/custom-event-class/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/custom-event-class/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/custom-templates/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/custom-templates/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/custom-templates/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/custom-templates/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/custom-templates/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/custom-templates/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/custom-templates/template.html ./angular-calendar-gs2/projects/demos/app/demo-modules/custom-templates/template.html
+  <small style="margin: 5px"				      |	  <small style="margin: 5px;"
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/customise-current-time-marker/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/customise-current-time-marker/component.ts
+  styleUrls: ['./styles.scss']				      |	  styleUrls: ['./styles.scss'],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/customise-current-time-marker/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/customise-current-time-marker/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    FormsModule						      |	    FormsModule,
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/customise-current-time-marker/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/customise-current-time-marker/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/customise-date-formats/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/customise-date-formats/component.ts
+  CalendarView						      |	  CalendarView,
+      useClass: CustomDateFormatter			      |	      useClass: CustomDateFormatter,
+    }							      |	    },
+  ]							      |	  ],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/customise-date-formats/custom-date-formatter.provider.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/customise-date-formats/custom-date-formatter.provider.ts
+import { DatePipe } from '@angular/common';		      |	import { formatDate } from '@angular/common';
+    return new DatePipe(locale).transform(date, 'EEE', locale |	    return formatDate(date, 'EEE', locale);
+    return new DatePipe(locale).transform(date, 'MMM y', loca |	    return formatDate(date, 'MMM y', locale);
+    return new DatePipe(locale).transform(date, 'EEE', locale |	    return formatDate(date, 'EEE', locale);
+    return new DatePipe(locale).transform(date, 'HH:mm', loca |	    return formatDate(date, 'HH:mm', locale);
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/customise-date-formats/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/customise-date-formats/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/customise-date-formats/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/customise-date-formats/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/dark-theme/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/dark-theme/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+  encapsulation: ViewEncapsulation.None			      |	  encapsulation: ViewEncapsulation.None,
+      color: colors.red					      |	      color: colors.red,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/dark-theme/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/dark-theme/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/dark-theme/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/dark-theme/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+        )						      |	        ),
+        )						      |	        ),
+      }							      |	      },
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/dark-theme/styles.scss ./angular-calendar-gs2/projects/demos/app/demo-modules/dark-theme/styles.scss
+      event-color-primary: $bg-dark-secondary		      |	      event-color-primary: $bg-dark-secondary,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-hour-split/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-hour-split/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-hour-split/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-hour-split/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-hour-split/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-hour-split/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-scheduler/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-scheduler/component.ts
+  CalendarEventTimesChangedEvent			      |	  CalendarEventTimesChangedEvent,
+							      >	import { User } from './day-view-scheduler.component';
+const users = [						      |	const users: User[] = [
+    color: colors.yellow				      |	    color: colors.yellow,
+    color: colors.blue					      |	    color: colors.blue,
+  }							      |	  },
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+							      >	  users = users;
+							      >
+        user: users[0]					      |	        user: users[0],
+        afterEnd: true					      |	        afterEnd: true,
+      draggable: true					      |	      draggable: true,
+        user: users[1]					      |	        user: users[1],
+        afterEnd: true					      |	        afterEnd: true,
+      draggable: true					      |	      draggable: true,
+      title: 'An 3rd event',				      |	      title: 'A 3rd event',
+        user: users[0]					      |	        user: users[0],
+        afterEnd: true					      |	        afterEnd: true,
+							      >	      },
+							      >	      draggable: true,
+							      >	    },
+							      >	    {
+							      >	      title: 'An all day event',
+							      >	      color: users[0].color,
+							      >	      start: new Date(),
+							      >	      meta: {
+							      >	        user: users[0],
+							      >	      },
+							      >	      draggable: true,
+							      >	      allDay: true,
+							      >	    },
+							      >	    {
+							      >	      title: 'Another all day event',
+							      >	      color: users[1].color,
+							      >	      start: new Date(),
+							      >	      meta: {
+							      >	        user: users[1],
+							      >	      },
+							      >	      draggable: true,
+							      >	      allDay: true,
+							      >	    },
+							      >	    {
+							      >	      title: 'A 3rd all day event',
+							      >	      color: users[0].color,
+							      >	      start: new Date(),
+							      >	      meta: {
+							      >	        user: users[0],
+							      >	      },
+							      >	      draggable: true,
+							      >	      allDay: true,
+      draggable: true					      <
+    }							      <
+    newEnd						      |	    newEnd,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-scheduler/day-view-scheduler.component.html ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-scheduler/day-view-scheduler.component.html
+  <div class="day-view-column-headers">			      |	  <div class="cal-day-headers" role="row">
+    <div class="day-view-column-header" *ngFor="let user of v |	    <div
+      {{ user.name }}					      |	      class="cal-header"
+							      >	      *ngFor="let user of users; trackBy: trackByUserId"
+							      >	      tabindex="0"
+							      >	      role="columnheader"
+							      >	    >
+							      >	      <b>{{ user.name }}</b>
+							      >	    </div>
+							      >	  </div>
+							      >	  <div
+							      >	    class="cal-all-day-events"
+							      >	    #allDayEventsContainer
+							      >	    *ngIf="view.allDayEventRows.length > 0"
+							      >	    mwlDroppable
+							      >	    (dragEnter)="dragEnter('allDay')"
+							      >	    (dragLeave)="dragLeave('allDay')"
+							      >	  >
+							      >	    <div class="cal-day-columns">
+							      >	      <div
+							      >	        class="cal-time-label-column"
+							      >	        [ngTemplateOutlet]="allDayEventsLabelTemplate"
+							      >	      ></div>
+							      >	      <div
+							      >	        class="cal-day-column"
+							      >	        *ngFor="let day of days; trackBy: trackByWeekDayHeade
+							      >	        mwlDroppable
+							      >	        dragOverClass="cal-drag-over"
+							      >	        (drop)="eventDropped($event, day.date, true)"
+							      >	        (dragEnter)="dateDragEnter(day.date)"
+							      >	      ></div>
+							      >	    </div>
+							      >	    <div
+							      >	      *ngFor="let eventRow of view.allDayEventRows; trackBy: 
+							      >	      #eventRowContainer
+							      >	      class="cal-events-row"
+							      >	    >
+							      >	      <div
+							      >	        *ngFor="
+							      >	          let allDayEvent of eventRow.row;
+							      >	          trackBy: trackByWeekAllDayEvent
+							      >	        "
+							      >	        #event
+							      >	        class="cal-event-container"
+							      >	        [class.cal-draggable]="
+							      >	          allDayEvent.event.draggable && allDayEventResizes.s
+							      >	        "
+							      >	        [class.cal-starts-within-week]="!allDayEvent.startsBe
+							      >	        [class.cal-ends-within-week]="!allDayEvent.endsAfterW
+							      >	        [ngClass]="allDayEvent.event?.cssClass"
+							      >	        [style.width.%]="(100 / users.length) * allDayEvent.s
+							      >	        [style.marginLeft.%]="(100 / users.length) * allDayEv
+							      >	        mwlDraggable
+							      >	        dragActiveClass="cal-drag-active"
+							      >	        [dropData]="{ event: allDayEvent.event, calendarId: c
+							      >	        [dragAxis]="{
+							      >	          x: allDayEvent.event.draggable && allDayEventResize
+							      >	          y:
+							      >	            !snapDraggedEvents &&
+							      >	            allDayEvent.event.draggable &&
+							      >	            allDayEventResizes.size === 0
+							      >	        }"
+							      >	        [dragSnapGrid]="snapDraggedEvents ? { x: dayColumnWid
+							      >	        [validateDrag]="validateDrag"
+							      >	        (dragStart)="dragStarted(eventRowContainer, event)"
+							      >	        (dragging)="allDayEventDragMove()"
+							      >	        (dragEnd)="dragEnded(allDayEvent, $event, dayColumnWi
+							      >	      >
+							      >	        <mwl-calendar-week-view-event
+							      >	          [locale]="locale"
+							      >	          [weekEvent]="allDayEvent"
+							      >	          [tooltipPlacement]="tooltipPlacement"
+							      >	          [tooltipTemplate]="tooltipTemplate"
+							      >	          [tooltipAppendToBody]="tooltipAppendToBody"
+							      >	          [tooltipDelay]="tooltipDelay"
+							      >	          [customTemplate]="eventTemplate"
+							      >	          [eventTitleTemplate]="eventTitleTemplate"
+							      >	          [eventActionsTemplate]="eventActionsTemplate"
+							      >	          [daysInWeek]="daysInWeek"
+							      >	          (eventClicked)="
+							      >	            eventClicked.emit({
+							      >	              event: allDayEvent.event,
+							      >	              sourceEvent: $event.sourceEvent
+							      >	            })
+							      >	          "
+							      >	        >
+							      >	        </mwl-calendar-week-view-event>
+							      >	      </div>
+							      >	        <mwl-calendar-week-view-current-time-marker
+							      >	          [columnDate]="column.date"
+							      >	          [dayStartHour]="dayStartHour"
+							      >	          [dayStartMinute]="dayStartMinute"
+							      >	          [dayEndHour]="dayEndHour"
+							      >	          [dayEndMinute]="dayEndMinute"
+							      >	          [hourSegments]="hourSegments"
+							      >	          [hourSegmentHeight]="hourSegmentHeight"
+							      >	          [customTemplate]="currentTimeMarkerTemplate"
+							      >	        ></mwl-calendar-week-view-current-time-marker>
+          [style.left.px]="timeEvent.left"		      |	          [style.left.%]="timeEvent.left"
+          [style.width.px]="timeEvent.width"		      |	          [style.width.%]="timeEvent.width"
+              ? { x: eventWidth, y: eventSnapSize || hourSegm |	              ? { x: dayColumnWidth, y: eventSnapSize || hour
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-scheduler/day-view-scheduler.component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-scheduler/day-view-scheduler.component.ts
+import { Component, EventEmitter, Injectable, Output } from ' |	import {
+import { CalendarUtils, CalendarWeekViewComponent } from 'ang |	  ChangeDetectorRef,
+import { WeekView, GetWeekViewArgs, WeekViewTimeEvent } from  |	  Component,
+							      >	  EventEmitter,
+							      >	  Inject,
+							      >	  Injectable,
+							      >	  Input,
+							      >	  LOCALE_ID,
+							      >	  OnChanges,
+							      >	  Output,
+							      >	  SimpleChanges,
+							      >	} from '@angular/core';
+							      >	import {
+							      >	  CalendarUtils,
+							      >	  CalendarWeekViewComponent,
+							      >	  DateAdapter,
+							      >	  getWeekViewPeriod,
+							      >	} from 'angular-calendar';
+							      >	import {
+							      >	  WeekView,
+							      >	  GetWeekViewArgs,
+							      >	  WeekViewTimeEvent,
+							      >	  EventColor,
+							      >	  CalendarEvent,
+							      >	  WeekViewAllDayEventRow,
+							      >	  WeekViewAllDayEvent,
+							      >	} from 'calendar-utils';
+const EVENT_WIDTH = 150;				      |	export interface User {
+							      >	  id: number;
+							      >	  name: string;
+							      >	  color: EventColor;
+							      >	}
+  users: any[];						      |	  users: User[];
+							      >	}
+							      >
+							      >	interface GetWeekViewArgsWithUsers extends GetWeekViewArgs {
+							      >	  users: User[];
+  getWeekView(args: GetWeekViewArgs): DayViewScheduler {      |	  getWeekView(args: GetWeekViewArgsWithUsers): DayViewSchedul
+							      >	    const { period } = super.getWeekView(args);
+      ...super.getWeekView(args),			      |	      period,
+      users: []						      |	      allDayEventRows: [],
+							      >	      hourColumns: [],
+							      >	      users: [...args.users],
+    view.hourColumns[0].events.forEach(({ event }) => {	      |
+      // assumes user objects are the same references,	      |	    view.users.forEach((user, columnIndex) => {
+      // if 2 users have the same structure but different obj |	      const events = args.events.filter(
+      if (!view.users.includes(event.meta.user)) {	      |	        (event) => event.meta.user.id === user.id
+        view.users.push(event.meta.user);		      <
+      }							      <
+    });							      <
+    // sort the users by their names			      <
+    view.users.sort((user1, user2) => user1.name.localeCompar <
+    view.hourColumns[0].events = view.hourColumns[0].events.m <
+      dayViewEvent => {					      <
+        const index = view.users.indexOf(dayViewEvent.event.m <
+        dayViewEvent.left = index * EVENT_WIDTH; // change th <
+        dayViewEvent.width = EVENT_WIDTH;		      <
+        return dayViewEvent;				      <
+      }							      <
+							      >	      const columnView = super.getWeekView({
+							      >	        ...args,
+							      >	        events,
+							      >	      });
+							      >	      view.hourColumns.push(columnView.hourColumns[0]);
+							      >	      columnView.allDayEventRows.forEach(({ row }, rowIndex) 
+							      >	        view.allDayEventRows[rowIndex] = view.allDayEventRows
+							      >	          row: [],
+							      >	        };
+							      >	        view.allDayEventRows[rowIndex].row.push({
+							      >	          ...row[0],
+							      >	          offset: columnIndex,
+							      >	          span: 1,
+							      >	        });
+							      >	      });
+							      >	    });
+							      >
+  styles: [						      |	  templateUrl: 'day-view-scheduler.component.html',
+    `							      |	  providers: [DayViewSchedulerCalendarUtils],
+      .day-view-column-headers {			      <
+        display: flex;					      <
+        margin-left: 70px;				      <
+      }							      <
+      .day-view-column-header {				      <
+        width: 150px;					      <
+        border: solid 1px black;			      <
+        text-align: center;				      <
+      }							      <
+      .cal-time-events {				      <
+        border-top: solid 1px #e1e1e1;			      <
+      }							      <
+      .cal-week-view {					      <
+        border-top: 0;					      <
+      }							      <
+    `							      <
+  ],							      <
+  providers: [						      <
+    {							      <
+      provide: CalendarUtils,				      <
+      useClass: DayViewSchedulerCalendarUtils		      <
+    }							      <
+  ],							      <
+  templateUrl: 'day-view-scheduler.component.html'	      <
+export class DayViewSchedulerComponent extends CalendarWeekVi |	export class DayViewSchedulerComponent extends CalendarWeekVi
+							      >	  implements OnChanges {
+							      >	  @Input() users: User[] = [];
+							      >
+  eventWidth = EVENT_WIDTH;				      |	  constructor(
+							      >	    protected cdr: ChangeDetectorRef,
+							      >	    protected utils: DayViewSchedulerCalendarUtils,
+							      >	    @Inject(LOCALE_ID) locale: string,
+							      >	    protected dateAdapter: DateAdapter
+							      >	  ) {
+							      >	    super(cdr, utils, locale, dateAdapter);
+							      >	  }
+  private originalLeft: number;				      |	  trackByUserId = (index: number, row: User) => row.id;
+  dragStarted(						      |	  ngOnChanges(changes: SimpleChanges): void {
+    eventsContainer: HTMLElement,			      |	    super.ngOnChanges(changes);
+    event: HTMLElement,					      |
+    dayEvent?: WeekViewTimeEvent			      |	    if (changes.users) {
+  ) {							      |	      this.refreshBody();
+    this.originalLeft = dayEvent.left;			      |	      this.emitBeforeViewRender();
+    super.dragStarted(eventsContainer, event, dayEvent);      |	    }
+							      >	  }
+							      >
+							      >	  getDayColumnWidth(eventRowContainer: HTMLElement): number {
+							      >	    return Math.floor(eventRowContainer.offsetWidth / this.us
+    const originalX = dragEvent.x;			      |	    if (this.snapDraggedEvents) {
+    dragEvent.x = 0;					      |	      const newUser = this.getDraggedUserColumn(dayEvent, dra
+    super.dragMove(dayEvent, dragEvent);		      |	      const newEventTimes = this.getDragMovedEventTimes(
+    const newUserColumn = this.getDraggedUserColumn(dayEvent, |	        dayEvent,
+    this.view.hourColumns[0].events.forEach(iDayEvent => {    |	        { ...dragEvent, x: 0 },
+      if (iDayEvent.event === dayEvent.event) {		      |	        this.dayColumnWidth,
+        iDayEvent.left = newUserColumn			      |	        true
+          ? this.originalLeft + originalX		      |	      );
+          : (this.view.users.length - 1) * EVENT_WIDTH;	      |	      const originalEvent = dayEvent.event;
+							      >	      const adjustedEvent = {
+							      >	        ...originalEvent,
+							      >	        ...newEventTimes,
+							      >	        meta: { ...originalEvent.meta, user: newUser },
+							      >	      };
+							      >	      const tempEvents = this.events.map((event) => {
+							      >	        if (event === originalEvent) {
+							      >	          return adjustedEvent;
+							      >	        return event;
+							      >	      this.restoreOriginalEvents(
+							      >	        tempEvents,
+							      >	        new Map([[adjustedEvent, originalEvent]])
+							      >	      );
+							      >	    }
+							      >	    this.dragAlreadyMoved = true;
+    weekEvent: WeekViewTimeEvent,			      |	    weekEvent: WeekViewAllDayEvent | WeekViewTimeEvent,
+    super.dragEnded(weekEvent, dragEndEvent, dayWidth, useY); |	    super.dragEnded(
+							      >	      weekEvent,
+							      >	      {
+							      >	        ...dragEndEvent,
+							      >	        x: 0,
+							      >	      },
+							      >	      dayWidth,
+							      >	      useY
+							      >	    );
+  private getDraggedUserColumn(dayEvent: WeekViewTimeEvent, x |	  protected getWeekView(events: CalendarEvent[]) {
+    const columnsMoved = xPixels / EVENT_WIDTH;		      |	    return this.utils.getWeekView({
+							      >	      events,
+							      >	      users: this.users,
+							      >	      viewDate: this.viewDate,
+							      >	      weekStartsOn: this.weekStartsOn,
+							      >	      excluded: this.excludeDays,
+							      >	      precision: this.precision,
+							      >	      absolutePositionedEvents: true,
+							      >	      hourSegments: this.hourSegments,
+							      >	      dayStart: {
+							      >	        hour: this.dayStartHour,
+							      >	        minute: this.dayStartMinute,
+							      >	      },
+							      >	      dayEnd: {
+							      >	        hour: this.dayEndHour,
+							      >	        minute: this.dayEndMinute,
+							      >	      },
+							      >	      segmentHeight: this.hourSegmentHeight,
+							      >	      weekendDays: this.weekendDays,
+							      >	      ...getWeekViewPeriod(
+							      >	        this.dateAdapter,
+							      >	        this.viewDate,
+							      >	        this.weekStartsOn,
+							      >	        this.excludeDays,
+							      >	        this.daysInWeek
+							      >	      ),
+							      >	    });
+							      >	  }
+							      >
+							      >	  private getDraggedUserColumn(
+							      >	    dayEvent: WeekViewTimeEvent | WeekViewAllDayEvent,
+							      >	    xPixels: number
+							      >	  ) {
+							      >	    const columnsMoved = Math.round(xPixels / this.dayColumnW
+      user => user === dayEvent.event.meta.user		      |	      (user) => user === dayEvent.event.meta.user
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-scheduler/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-scheduler/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-scheduler/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-scheduler/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-scheduler/template.html ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-scheduler/template.html
+							      >	  [users]="users"
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-start-end/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-start-end/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-start-end/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-start-end/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/day-view-start-end/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/day-view-start-end/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+Only in ./angular-calendar-gs2/projects/demos/app/demo-modules: dayjs
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/demo-utils/calendar-header.component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/demo-utils/calendar-header.component.ts
+            (click)="viewChange.emit('month')"		      |	            (click)="viewChange.emit(CalendarView.Month)"
+            [class.active]="view === 'month'"		      |	            [class.active]="view === CalendarView.Month"
+            (click)="viewChange.emit('week')"		      |	            (click)="viewChange.emit(CalendarView.Week)"
+            [class.active]="view === 'week'"		      |	            [class.active]="view === CalendarView.Week"
+            (click)="viewChange.emit('day')"		      |	            (click)="viewChange.emit(CalendarView.Day)"
+            [class.active]="view === 'day'"		      |	            [class.active]="view === CalendarView.Day"
+  `							      |	  `,
+  @Input() view: CalendarView | 'month' | 'week' | 'day';     |	  @Input() view: CalendarView;
+  @Output() viewChange: EventEmitter<string> = new EventEmitt |	  @Output() viewChange = new EventEmitter<CalendarView>();
+  @Output() viewDateChange: EventEmitter<Date> = new EventEmi |	  @Output() viewDateChange = new EventEmitter<Date>();
+							      >
+							      >	  CalendarView = CalendarView;
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/demo-utils/colors.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/demo-utils/colors.ts
+    secondary: '#FAE3E3'				      |	    secondary: '#FAE3E3',
+    secondary: '#D1E8FF'				      |	    secondary: '#D1E8FF',
+    secondary: '#FDF1BA'				      |	    secondary: '#FDF1BA',
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/demo-utils/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/demo-utils/module.ts
+  exports: [CalendarHeaderComponent]			      |	  exports: [CalendarHeaderComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/demo-utils/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/demo-utils/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/disable-slide-animation/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/disable-slide-animation/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      color: colors.red					      |	      color: colors.red,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/disable-slide-animation/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/disable-slide-animation/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/disable-slide-animation/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/disable-slide-animation/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/disable-tooltips/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/disable-tooltips/component.ts
+  CalendarView						      |	  CalendarView,
+      useClass: CustomEventTitleFormatter		      |	      useClass: CustomEventTitleFormatter,
+    }							      |	    },
+  ]							      |	  ],
+      color: colors.red					      |	      color: colors.red,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/disable-tooltips/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/disable-tooltips/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/disable-tooltips/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/disable-tooltips/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/drag-to-create-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/drag-to-create-events/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+import { WeekViewHourSegment } from '../../../../angular-cale |	import { WeekViewHourSegment } from 'calendar-utils';
+      useClass: CustomEventTitleFormatter		      |	      useClass: CustomEventTitleFormatter,
+    }							      |	    },
+    `							      |	    `,
+  encapsulation: ViewEncapsulation.None			      |	  encapsulation: ViewEncapsulation.None,
+        tmpEvent: true					      |	        tmpEvent: true,
+      }							      |	      },
+      weekStartsOn: this.weekStartsOn			      |	      weekStartsOn: this.weekStartsOn,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/drag-to-create-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/drag-to-create-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/drag-to-create-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/drag-to-create-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/drag-to-create-events/template.html ./angular-calendar-gs2/projects/demos/app/demo-modules/drag-to-create-events/template.html
+        [view]="'day'"					      |	        [view]="'week'"
+        [view]="'day'"					      |	        [view]="'week'"
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/draggable-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/draggable-events/component.ts
+  CalendarView						      |	  CalendarView,
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      draggable: true					      |	      draggable: true,
+      start: new Date()					      |	      start: new Date(),
+    }							      |	    },
+    newEnd						      |	    newEnd,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/draggable-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/draggable-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/draggable-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/draggable-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/draggable-external-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/draggable-external-events/component.ts
+  CalendarView						      |	  CalendarView,
+    `							      |	    `,
+  ]							      |	  ],
+      draggable: true					      |	      draggable: true,
+      draggable: true					      |	      draggable: true,
+    }							      |	    },
+    allDay						      |	    allDay,
+      this.events = this.events.filter(iEvent => iEvent !== e |	      this.events = this.events.filter((iEvent) => iEvent !==
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/draggable-external-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/draggable-external-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/draggable-external-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/draggable-external-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/draggable-external-events/template.html ./angular-calendar-gs2/projects/demos/app/demo-modules/draggable-external-events/template.html
+							      >	            [touchStartLongPress]="{ delay: 300, delta: 30 }"
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/editable-deletable-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/editable-deletable-events/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+          label: '<i class="fa fa-fw fa-pencil"></i>',	      |	          label: '<i class="fas fa-fw fa-pencil-alt"></i>',
+          }						      |	          },
+        }						      |	        },
+      ]							      |	      ],
+          label: '<i class="fa fa-fw fa-times"></i>',	      |	          label: '<i class="fas fa-fw fa-trash-alt"></i>',
+            this.events = this.events.filter(iEvent => iEvent |	            this.events = this.events.filter((iEvent) => iEve
+          }						      |	          },
+        }						      |	        },
+      ]							      |	      ],
+      start: new Date()					      |	      start: new Date(),
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/editable-deletable-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/editable-deletable-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/editable-deletable-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/editable-deletable-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/exclude-days/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/exclude-days/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      allDay: true					      |	      allDay: true,
+      allDay: true					      |	      allDay: true,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/exclude-days/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/exclude-days/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/exclude-days/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/exclude-days/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/extra-month-view-weeks/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/extra-month-view-weeks/component.ts
+import { GetMonthViewArgs, MonthView } from '../../../../angu |	import { GetMonthViewArgs, MonthView } from 'calendar-utils';
+      useClass: MyCalendarUtils				      |	      useClass: MyCalendarUtils,
+    }							      |	    },
+  ]							      |	  ],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/extra-month-view-weeks/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/extra-month-view-weeks/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/extra-month-view-weeks/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/extra-month-view-weeks/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/group-similar-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/group-similar-events/component.ts
+  CalendarView						      |	  CalendarView,
+    `							      |	    `,
+  ]							      |	  ],
+        type: 'warning'					      |	        type: 'warning',
+      }							      |	      },
+        type: 'warning'					      |	        type: 'warning',
+      }							      |	      },
+        type: 'info'					      |	        type: 'info',
+      }							      |	      },
+        type: 'danger'					      |	        type: 'danger',
+      }							      |	      },
+        type: 'danger'					      |	        type: 'danger',
+      }							      |	      },
+    }							      |	    },
+    this.events.forEach(event => {			      |	    this.events.forEach((event) => {
+      const similarEvents = this.events.filter(otherEvent =>  |	      const similarEvents = this.events.filter((otherEvent) =
+      similarEvents.forEach(otherEvent => {		      |	      similarEvents.forEach((otherEvent) => {
+            groupedEvents: [event, ...similarEvents]	      |	            groupedEvents: [event, ...similarEvents],
+          }						      |	          },
+    body						      |	    body,
+    body: Array<CalendarMonthViewDay<EventGroupMeta>>;	      |	    body: CalendarMonthViewDay<EventGroupMeta>[];
+    body.forEach(cell => {				      |	    body.forEach((cell) => {
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/group-similar-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/group-similar-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/group-similar-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/group-similar-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/i18n/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/i18n/component.ts
+  DAYS_OF_WEEK						      |	  DAYS_OF_WEEK,
+      useClass: CustomDateFormatter			      |	      useClass: CustomDateFormatter,
+    }							      |	    },
+  ]							      |	  ],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/i18n/custom-date-formatter.provider.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/i18n/custom-date-formatter.provider.ts
+import { DatePipe } from '@angular/common';		      |	import { formatDate } from '@angular/common';
+    return new DatePipe(locale).transform(date, 'HH:mm', loca |	    return formatDate(date, 'HH:mm', locale);
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/i18n/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/i18n/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/i18n/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/i18n/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+Only in ./angular-calendar-gs/projects/demos/app/demo-modules/kitchen-sink: .component.ts.swp
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/kitchen-sink/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/kitchen-sink/component.ts
+  TemplateRef						      |	  TemplateRef,
+							      >	  endOfMonth,
+  getMonth,						      <
+  addMonths,						      <
+  subMonths,						      <
+  endOfMonth,						      <
+  startOfMonth,						      <
+  endOfWeek,						      <
+  startOfWeek,						      <
+  addWeeks,						      <
+  CalendarView						      |	  CalendarView,
+import { EVENT_TYPE } from '../../../../angular-calendar/src/ <
+							      <
+    secondary: '#FAE3E3'				      |	    secondary: '#FAE3E3',
+  },							      <
+  green: {						      <
+    primary: '#00ff80',					      <
+    secondary: '#00cc66'				      <
+    secondary: '#D1E8FF'				      |	    secondary: '#D1E8FF',
+    secondary: '#FDF1BA'				      |	    secondary: '#FDF1BA',
+  },							      <
+  pink: {						      <
+    primary: '#ff99ff',					      <
+    secondary: '#ff33ff'				      <
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      label: '<i class="fa fa-fw fa-pencil"></i>',	      |	      label: '<i class="fas fa-fw fa-pencil-alt"></i>',
+      }							      |	      },
+      label: '<i class="fa fa-fw fa-times"></i>',	      |	      label: '<i class="fas fa-fw fa-trash-alt"></i>',
+        this.events = this.events.filter(iEvent => iEvent !== |	        this.events = this.events.filter((iEvent) => iEvent !
+      }							      |	      },
+    }							      |	    },
+  _today: Date =  new Date();				      <
+  _month: Number = getMonth(this._today);		      <
+  _prev_month = subMonths(this._today ,1);		      <
+  _next_month = addMonths(this._today ,1);		      <
+  _1weekday  = startOfMonth(this._today);		      <
+  _2weekday  = addWeeks(this._1weekday,1);		      <
+  _3weekday  = addWeeks(this._1weekday,2);		      <
+  _4weekday  = addWeeks(this._1weekday,3);		      <
+							      <
+    							      <
+      start: this._prev_month,				      |	      start: subDays(startOfDay(new Date()), 1),
+      end: this._today,					      |	      end: addDays(new Date(), 1),
+      title: 'task m1',					      |	      title: 'A 3 day event',
+      eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+      resizable: {					      <
+        beforeStart: true,				      <
+        afterEnd: true					      <
+      },						      <
+      draggable: true					      <
+    },							      <
+    {							      <
+    start: this._today,					      <
+    end: this._next_month,				      <
+    title: 'task m2',					      <
+    color: colors.green,				      <
+    actions: this.actions,				      <
+    allDay: true,					      <
+    eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+    resizable: {					      <
+      beforeStart: true,				      <
+      afterEnd: true					      <
+    },							      <
+    draggable: true					      <
+  },							      <
+  {							      <
+    start: this._prev_month,				      <
+    end:   this._next_month,				      <
+    title: 'task m3',					      <
+    color: colors.green,				      <
+    actions: this.actions,				      <
+    allDay: true,					      <
+    eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+      afterEnd: true					      |	        afterEnd: true,
+    draggable: true					      |	      draggable: true,
+  },							      <
+							      <
+  {							      <
+    start: endOfMonth(this._prev_month),		      <
+    end: startOfMonth(this._today),			      <
+    title: 'task m4',					      <
+    color: colors.green,				      <
+    actions: this.actions,				      <
+    allDay: true,					      <
+    eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+    resizable: {					      <
+      beforeStart: true,				      <
+      afterEnd: true					      <
+    },							      <
+    draggable: true					      <
+  },							      <
+							      <
+    {							      <
+      start  : endOfMonth(this._today),			      <
+      end: startOfMonth(this._next_month),		      <
+      title: 'task m5',					      <
+      color: colors.red,				      <
+      actions: this.actions,				      <
+      allDay: true,					      <
+      eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+      resizable: {					      <
+        beforeStart: true,				      <
+        afterEnd: true					      <
+      },						      <
+      draggable: true					      <
+    },							      <
+/***************************************************/	      <
+    {							      <
+      start  : this._1weekday,				      <
+      end: this._2weekday,				      <
+      title: 'task w1',					      <
+      color: colors.pink,				      <
+      actions: this.actions,				      <
+      allDay: true,					      <
+      eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+      resizable: {					      <
+        beforeStart: true,				      <
+        afterEnd: true					      <
+      },						      <
+      draggable: true					      <
+    },							      <
+    {							      <
+      start  : this._2weekday,				      <
+      end: endOfWeek(this._3weekday),			      <
+      title: 'task w2',					      <
+      color: colors.pink,				      <
+      actions: this.actions,				      <
+      allDay: true,					      <
+      eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+      resizable: {					      <
+        beforeStart: true,				      <
+        afterEnd: true					      <
+      },						      <
+      draggable: true					      <
+    },							      <
+    {							      <
+      start  : this._1weekday,				      <
+      end: startOfWeek(this._2weekday),			      <
+      title: 'task w3',					      <
+      color: colors.pink,				      <
+      actions: this.actions,				      <
+      allDay: true,					      <
+      eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+      resizable: {					      <
+        beforeStart: true,				      <
+        afterEnd: true					      <
+      },						      <
+      draggable: true					      <
+    },							      <
+    {							      <
+      start  : subDays(this._1weekday,3),		      <
+      end: addDays(this._2weekday,1),			      <
+      title: 'task w4',					      <
+      color: colors.blue,				      <
+      actions: this.actions,				      <
+      allDay: true,					      <
+      eventType: EVENT_TYPE.EVENT_TASK,  // GS		      <
+      resizable: {					      <
+        beforeStart: true,				      <
+        afterEnd: true					      <
+      },						      <
+      draggable: true					      <
+      eventType: EVENT_TYPE.EVENT_TIME,  // GS		      <
+      actions: this.actions				      |	      actions: this.actions,
+      eventType: EVENT_TYPE.EVENT_TIME,  // GS		      <
+      allDay: true					      |	      allDay: true,
+      eventType: EVENT_TYPE.EVENT_TIME,  // GS		      <
+        afterEnd: true					      |	        afterEnd: true,
+							      >	      },
+							      >	      draggable: true,
+      draggable: true					      <
+    }							      <
+    newEnd						      |	    newEnd,
+    this.events = this.events.map(iEvent => {		      |	    this.events = this.events.map((iEvent) => {
+          end: newEnd					      |	          end: newEnd,
+          afterEnd: true				      |	          afterEnd: true,
+        }						      |	        },
+      }							      |	      },
+    this.events = this.events.filter(event => event !== event |	    this.events = this.events.filter((event) => event !== eve
+Only in ./angular-calendar-gs/projects/demos/app/demo-modules/kitchen-sink: component.ts.old1
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/kitchen-sink/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/kitchen-sink/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    })							      |	    }),
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/kitchen-sink/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/kitchen-sink/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/kitchen-sink/template.html ./angular-calendar-gs2/projects/demos/app/demo-modules/kitchen-sink/template.html
+  <button class="btn btn-primary pull-right" (click)="addEven |	  <button class="btn btn-primary float-right" (click)="addEve
+<!--  GUSA						      <
+-->							      <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/min-max-date/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/min-max-date/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+  CalendarView						      |	  CalendarView,
+  endOfDay						      |	  endOfDay,
+    month: addMonths					      |	    month: addMonths,
+    month: subMonths					      |	    month: subMonths,
+    month: startOfMonth					      |	    month: startOfMonth,
+    month: endOfMonth					      |	    month: endOfMonth,
+  encapsulation: ViewEncapsulation.None			      |	  encapsulation: ViewEncapsulation.None,
+    body.forEach(day => {				      |	    body.forEach((day) => {
+Only in ./angular-calendar-gs/projects/demos/app/demo-modules/min-max-date: index.ts
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/min-max-date/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/min-max-date/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/min-max-date/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/min-max-date/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/moment/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/moment/component.ts
+    doy: 0						      |	    doy: 0,
+  }							      |	  },
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/moment/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/moment/module.ts
+  MOMENT						      |	  MOMENT,
+        useFactory: momentAdapterFactory		      |	        useFactory: momentAdapterFactory,
+          useClass: CalendarMomentDateFormatter		      |	          useClass: CalendarMomentDateFormatter,
+        }						      |	        },
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+      useValue: moment					      |	      useValue: moment,
+    }							      |	    },
+  ]							      |	  ],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/moment/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/moment/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/month-view-badge-total/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/month-view-badge-total/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+  events: Array<CalendarEvent<{ incrementsBadgeTotal: boolean |	  events: CalendarEvent<{ incrementsBadgeTotal: boolean }>[] 
+        incrementsBadgeTotal: true			      |	        incrementsBadgeTotal: true,
+      }							      |	      },
+        incrementsBadgeTotal: false			      |	        incrementsBadgeTotal: false,
+      }							      |	      },
+    }							      |	    },
+    body.forEach(day => {				      |	    body.forEach((day) => {
+        event => event.meta.incrementsBadgeTotal	      |	        (event) => event.meta.incrementsBadgeTotal
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/month-view-badge-total/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/month-view-badge-total/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/month-view-badge-total/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/month-view-badge-total/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/navigating-between-views/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/navigating-between-views/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/navigating-between-views/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/navigating-between-views/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/navigating-between-views/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/navigating-between-views/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/no-events-label/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/no-events-label/component.ts
+  ChangeDetectorRef					      |	  ChangeDetectorRef,
+  CalendarView						      |	  CalendarView,
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      start: new Date()					      |	      start: new Date(),
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/no-events-label/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/no-events-label/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/no-events-label/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/no-events-label/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/optional-event-end-dates/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/optional-event-end-dates/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      color: colors.blue				      |	      color: colors.blue,
+      color: colors.yellow				      |	      color: colors.yellow,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/optional-event-end-dates/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/optional-event-end-dates/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/optional-event-end-dates/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/optional-event-end-dates/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+Only in ./angular-calendar-gs2/projects/demos/app/demo-modules: public-holidays
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/recurring-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/recurring-events/component.ts
+  ChangeDetectorRef					      |	  ChangeDetectorRef,
+  CalendarWeekViewBeforeRenderEvent			      |	  CalendarWeekViewBeforeRenderEvent,
+import { ViewPeriod } from '../../../../angular-calendar/src/ |	import { ViewPeriod } from 'calendar-utils';
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+        bymonthday: 5					      |	        bymonthday: 5,
+      }							      |	      },
+        bymonthday: 10					      |	        bymonthday: 10,
+      }							      |	      },
+        byweekday: [RRule.MO]				      |	        byweekday: [RRule.MO],
+      }							      |	      },
+    }							      |	    },
+      this.recurringEvents.forEach(event => {		      |	      this.recurringEvents.forEach((event) => {
+          dtstart: moment(viewRender.period.start)	      |	          dtstart: moment(viewRender.period.start).startOf('d
+            .startOf('day')				      |	          until: moment(viewRender.period.end).endOf('day').t
+            .toDate(),					      <
+          until: moment(viewRender.period.end)		      <
+            .endOf('day')				      <
+            .toDate()					      <
+        rule.all().forEach(date => {			      |	        rule.all().forEach((date) => {
+            start: moment(date).toDate()		      |	            start: moment(date).toDate(),
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/recurring-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/recurring-events/module.ts
+  MOMENT						      |	  MOMENT,
+        useFactory: momentAdapterFactory		      |	        useFactory: momentAdapterFactory,
+          useClass: CalendarMomentDateFormatter		      |	          useClass: CalendarMomentDateFormatter,
+        }						      |	        },
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+      useValue: moment					      |	      useValue: moment,
+    }							      |	    },
+  ]							      |	  ],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/recurring-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/recurring-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/refreshing-the-view/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/refreshing-the-view/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+  CalendarView						      |	  CalendarView,
+    `							      |	    `,
+  ]							      |	  ],
+    body.forEach(day => {				      |	    body.forEach((day) => {
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/refreshing-the-view/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/refreshing-the-view/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/refreshing-the-view/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/refreshing-the-view/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/resizable-events/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/resizable-events/component.ts
+  CalendarView						      |	  CalendarView,
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+        afterEnd: true					      |	        afterEnd: true,
+      }							      |	      },
+      end: addDays(new Date(), 1)			      |	      end: addDays(new Date(), 1),
+    }							      |	    },
+    newEnd						      |	    newEnd,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/resizable-events/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/resizable-events/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/resizable-events/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/resizable-events/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/responsive-week-view/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/responsive-week-view/component.ts
+  ChangeDetectorRef					      |	  ChangeDetectorRef,
+  templateUrl: './template.html'			      |	  templateUrl: './template.html',
+        daysInWeek: 2					      |	        daysInWeek: 2,
+        daysInWeek: 3					      |	        daysInWeek: 3,
+        daysInWeek: 5					      |	        daysInWeek: 5,
+      }							      |	      },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/responsive-week-view/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/responsive-week-view/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/responsive-week-view/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/responsive-week-view/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+Only in ./angular-calendar-gs2/projects/demos/app/demo-modules: scroll-to-current-time
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/selectable-period/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/selectable-period/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+  CalendarView						      |	  CalendarView,
+							      >	  CalendarWeekViewBeforeRenderEvent,
+import { WeekViewHour } from '../../../../angular-calendar/sr |	import { WeekViewHour, WeekViewHourColumn } from 'calendar-ut
+    `							      |	    `,
+  encapsulation: ViewEncapsulation.None			      |	  encapsulation: ViewEncapsulation.None,
+  dayView: WeekViewHour[];				      |	  hourColumns: WeekViewHourColumn[];
+      selectedDay => selectedDay.date.getTime() === selectedD |	      (selectedDay) => selectedDay.date.getTime() === selecte
+    body.forEach(day => {				      |	    body.forEach((day) => {
+          selectedDay => selectedDay.date.getTime() === day.d |	          (selectedDay) => selectedDay.date.getTime() === day
+  beforeDayViewRender(dayView: WeekViewHour[]) {	      |	  beforeWeekOrDayViewRender(event: CalendarWeekViewBeforeRend
+    this.dayView = dayView;				      |	    this.hourColumns = event.hourColumns;
+    this.dayView.forEach(hourSegment => {		      |	    this.hourColumns.forEach((column) => {
+      hourSegment.segments.forEach(segment => {		      |	      column.hours.forEach((hourSegment) => {
+							      >	        hourSegment.segments.forEach((segment) => {
+							      >	        });
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/selectable-period/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/selectable-period/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/selectable-period/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/selectable-period/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/selectable-period/template.html ./angular-calendar-gs2/projects/demos/app/demo-modules/selectable-period/template.html
+  Click on a month view day or a day view hour to select it   |	  Click on a month view day or a time on the week or day view
+							      >	    (beforeViewRender)="beforeWeekOrDayViewRender($event)"
+							      >	    (hourSegmentClicked)="hourSegmentClicked($event.date)"
+    (beforeViewRender)="beforeDayViewRender($event.body.hourG |	    (beforeViewRender)="beforeWeekOrDayViewRender($event)"
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/show-dates-on-titles/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/show-dates-on-titles/component.ts
+  CalendarView						      |	  CalendarView,
+      useClass: CustomEventTitleFormatter		      |	      useClass: CustomEventTitleFormatter,
+    }							      |	    },
+  ]							      |	  ],
+      color: colors.red					      |	      color: colors.red,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/show-dates-on-titles/custom-event-title-formatter.provider.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/show-dates-on-titles/custom-event-title-formatter.provider.ts
+import { DatePipe } from '@angular/common';		      |	import { formatDate } from '@angular/common';
+    return `<b>${new DatePipe(this.locale).transform(	      |	    return `<b>${formatDate(event.start, 'h:m a', this.locale
+      event.start,					      |	      event.title
+      'h:m a',						      |	    }`;
+      this.locale					      <
+    )}</b> ${event.title}`;				      <
+    return `<b>${new DatePipe(this.locale).transform(	      |	    return `<b>${formatDate(event.start, 'h:m a', this.locale
+      event.start,					      |	      event.title
+      'h:m a',						      |	    }`;
+      this.locale					      <
+    )}</b> ${event.title}`;				      <
+    return `<b>${new DatePipe(this.locale).transform(	      |	    return `<b>${formatDate(event.start, 'h:m a', this.locale
+      event.start,					      |	      event.title
+      'h:m a',						      |	    }`;
+      this.locale					      <
+    )}</b> ${event.title}`;				      <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/show-dates-on-titles/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/show-dates-on-titles/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/show-dates-on-titles/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/show-dates-on-titles/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/week-view-event-margin/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/week-view-event-margin/component.ts
+  ViewEncapsulation					      |	  ViewEncapsulation,
+    `							      |	    `,
+  ]							      |	  ],
+      color: colors.yellow				      |	      color: colors.yellow,
+      color: colors.blue				      |	      color: colors.blue,
+      color: colors.red					      |	      color: colors.red,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/week-view-event-margin/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/week-view-event-margin/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/week-view-event-margin/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/week-view-event-margin/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/week-view-minute-precision/component.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/week-view-minute-precision/component.ts
+  templateUrl: 'template.html'				      |	  templateUrl: 'template.html',
+      allDay: true					      |	      allDay: true,
+      allDay: true					      |	      allDay: true,
+      allDay: true					      |	      allDay: true,
+    }							      |	    },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/week-view-minute-precision/module.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/week-view-minute-precision/module.ts
+      useFactory: adapterFactory			      |	      useFactory: adapterFactory,
+    RouterModule.forChild([{ path: '', component: DemoCompone |	    RouterModule.forChild([{ path: '', component: DemoCompone
+  exports: [DemoComponent]				      |	  exports: [DemoComponent],
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/app/demo-modules/week-view-minute-precision/sources.ts ./angular-calendar-gs2/projects/demos/app/demo-modules/week-view-minute-precision/sources.ts
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+      highlighted: require('!!raw-loader!highlightjs-loader?l |	      highlighted: require('!!raw-loader!highlightjs-loader?l
+    }							      |	    },
+  }							      |	  },
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/environments/environment.prod.ts ./angular-calendar-gs2/projects/demos/environments/environment.prod.ts
+  production: true					      |	  production: true,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/environments/environment.ts ./angular-calendar-gs2/projects/demos/environments/environment.ts
+  production: false					      |	  production: false,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/index.html ./angular-calendar-gs2/projects/demos/index.html
+      <link href="https://fonts.googleapis.com/css?family=Rob |
+    <link href="https://fonts.googleapis.com/icon?family=Mate |	    <style type="text/css">
+</head>							      |	      .formkit-slide-in {
+							      >	        max-width: 350px !important;
+							      >	        z-index: 1 !important;
+							      >	      }
+							      >
+							      >	      .formkit-slide-in .formkit-close {
+							      >	        z-index: 3;
+							      >	        top: 0 !important;
+							      >	      }
+							      >	    </style>
+							      >	  </head>
+      (function(i, s, o, g, r, a, m) {			      |	      (function (i, s, o, g, r, a, m) {
+          function() {					      |	          function () {
+							      >
+							      >	    <img
+							      >	      src="https://static.scarf.sh/a.png?x-pxid=a9c630e9-616e
+							      >	    />
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/main.ts ./angular-calendar-gs2/projects/demos/main.ts
+import 'hammerjs';					      <
+  .catch(err => console.log(err));			      |	  .catch((err) => console.log(err));
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/polyfills.ts ./angular-calendar-gs2/projects/demos/polyfills.ts
+							      >	/************************************************************
+							      >	 * Load `$localize` onto the global scope - used if i18n tags
+							      >	 */
+							      >	import '@angular/localize/init';
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/styles.scss ./angular-calendar-gs2/projects/demos/styles.scss
+@import '~font-awesome/css/font-awesome.css';		      |	@import '~@fortawesome/fontawesome-free/css/all.css';
+@import '~perfect-scrollbar/css/perfect-scrollbar.css';	      <
+							      <
+@import '../../node_modules/jexcel/dist/jexcel.css';  //GUSA  <
+@import '../../node_modules/jsuites/dist/jsuites.css';  //GUS <
+@import '../../node_modules/x-data-spreadsheet/dist/xspreadsh <
+							      <
+							      <
+html, body { height: 100%; }				      <
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans <
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/demos/tsconfig.app.json ./angular-calendar-gs2/projects/demos/tsconfig.app.json
+    "fullTemplateTypeCheck": true			      |	    "strictTemplates": true
+  }							      |	  },
+							      >	  "files": [
+							      >	    "main.ts",
+							      >	    "polyfills.ts"
+							      >	  ],
+							      >	  "include": [
+							      >	    "./app/demo-modules/**/*.ts"
+							      >	  ]

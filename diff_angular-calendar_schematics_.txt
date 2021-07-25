@@ -1,0 +1,75 @@
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/ng-add/index.spec.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/ng-add/index.spec.ts
+  UnitTestTree						      |	  UnitTestTree,
+import { getWorkspace } from '@schematics/angular/utility/con <
+import { getProjectFromWorkspace, getProjectTargetOptions } f |	import {
+							      >	  getProjectFromWorkspace,
+							      >	  getProjectTargetOptions,
+							      >	  getWorkspace,
+							      >	} from '../utils';
+      version: angularCalendarVersion			      |	      version: angularCalendarVersion,
+							      >	  it('should import angular-calendar module to root module wh
+							      >	    const rootModulePath = `/projects/${projectName}/src/app/
+							      >	    tree = await runner
+							      >	      .runSchematicAsync(
+							      >	        'ng-add',
+							      >	        {
+							      >	          ...defaultOptions,
+							      >	          module: 'src/app/app.module.ts',
+							      >	        },
+							      >	        appTree
+							      >	      )
+							      >	      .toPromise();
+							      >	    expect(tree.files).contain(rootModulePath);
+							      >
+							      >	    const rootModule = tree.readContent(rootModulePath);
+							      >
+							      >	    const calendarModuleImport = `import { CalendarModule, Da
+							      >	    expect(rootModule).contain(calendarModuleImport);
+							      >	  });
+							      >
+          dateAdapter: 'moment'				      |	          dateAdapter: 'moment',
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/ng-add/index.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/ng-add/index.ts
+  chain							      |	  chain,
+import { getWorkspace } from '@schematics/angular/utility/con <
+  NodeDependencyType					      |	  NodeDependencyType,
+							      >	import { normalize } from '@angular-devkit/core';
+  insertAfterImports					      |	  insertAfterImports,
+							      >	  getWorkspace,
+  angularCalendarVersion				      |	  angularCalendarVersion,
+export default function(options: Schema): Rule {	      |	export default function (options: Schema): Rule {
+    addAngularCalendarStyle(options)			      |	    addAngularCalendarStyle(options),
+      'date-fns': dateFnsVersion			      |	      'date-fns': dateFnsVersion,
+    overwrite: true					      |	    overwrite: true,
+    const project = getProjectFromWorkspace(		      |	    const project = getProjectFromWorkspace(workspace, option
+      workspace,					      <
+      options.projectName				      <
+        ? options.projectName				      <
+        : Object.keys(workspace['projects'])[0]		      <
+    );							      <
+      ? options.module					      |	      ? normalize(project.root + '/' + options.module)
+							      >
+      ) as InsertChange					      |	      ) as InsertChange,
+    updates.forEach(update => {				      |	    updates.forEach((update) => {
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/ng-add/schema.json ./angular-calendar-gs2/projects/angular-calendar/schematics/ng-add/schema.json
+  "id": "angular-calendar-schematic-ng-add",		      |	  "$id": "angular-calendar-schematic-ng-add",
+      "x-prompt": "Please enter a path to the NgModule that w |	      "x-prompt": "Please enter a path to the NgModule that w
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/ng-add/version-names.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/ng-add/version-names.ts
+const packageJson = require('../../package.json'); // tslint: |	const packageJson = require('./package.json'); // tslint:disa
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/testing/workspace.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/testing/workspace.ts
+  UnitTestTree						      |	  UnitTestTree,
+      newProjectRoot: 'projects'			      |	      newProjectRoot: 'projects',
+        ...appOptions					      |	        ...appOptions,
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/utils/ast.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/utils/ast.ts
+  insertAfterLastOccurrence				      |	  insertAfterLastOccurrence,
+import * as ts from 'typescript';			      |	import * as ts from '@schematics/angular/third_party/github.c
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/utils/config.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/utils/config.ts
+import { getWorkspace } from '@schematics/angular/utility/con <
+  WorkspaceSchema					      |	  WorkspaceSchema,
+import { getProjectFromWorkspace } from '.';		      |	import { getProjectFromWorkspace, getWorkspace } from '.';
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/utils/file.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/utils/file.ts
+import * as ts from 'typescript';			      |	import * as ts from '@schematics/angular/third_party/github.c
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/utils/get-project.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/utils/get-project.ts
+  WorkspaceProject					      |	  WorkspaceProject,
+Only in ./angular-calendar-gs2/projects/angular-calendar/schematics/utils: get-workspace.ts
+diff -rb --side-by-side --suppress-common-lines ./angular-calendar-gs/projects/angular-calendar/schematics/utils/index.ts ./angular-calendar-gs2/projects/angular-calendar/schematics/utils/index.ts
+							      >	export * from './get-workspace';
